@@ -3,641 +3,457 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ЗАБУДЬ ВСЁ — Официальный сайт команды аниматоров</title>
+<title>ЗАБУДЬ ВСЁ — Официальный сайт | Фан-арты, конкурс, 3 серия</title>
+<meta name="description" content="Официальный сайт анимационного сериала «Забудь Всё». Конкурс фан-артов — победитель попадёт в 3 серию. Загружай арт, смотри работы фанатов, узнай лор вселенной.">
+<meta name="keywords" content="забудь всё, забыть всё, ЗАБУДЬ ВСЁ, ЗаБуДь ВсЁ, забудь все, забыть все, забудь всё сериал, забудь всё анимация, забудь всё фан-арты, фан-арты забудь всё, fanart забудь всё, забудь всё конкурс, 3 серия забудь всё, третья серия забудь всё, пасхалка 3 серия, забудь всё официальный сайт, аниматоры забудь всё, Ананас аниматор, Скотч сценарист, Крикс, Стик, Лебби, Артинс, Блэк, синяя изолента, синяя изолента злодей, забудь всё лор, сайт забудь всё, конкурс рисунков, авторский мультсериал, независимая анимация, забудь всё персонажи, забудь всё мультик, zabudvse, zabudvsyo, забудьвсё">
+<meta name="author" content="Команда аниматоров Забудь Всё — Артинс">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#7b4fff">
+<meta property="og:title" content="ЗАБУДЬ ВСЁ — Официальный сайт | Конкурс фан-артов">
+<meta property="og:description" content="Конкурс фан-артов от команды «Забудь Всё». Победитель получит пасхалку в 3 серии.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="photo_2026-06-03_01-41-54.jpg">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #080612;
-    --bg2: #0e0c1c;
-    --accent1: #7b4fff;
-    --accent2: #ff4fa3;
-    --accent3: #4fffda;
-    --accent4: #ffd84f;
-    --text: #e8e0ff;
-    --muted: #8880aa;
-    --card: #13102a;
-    --card2: #1a1730;
-    --border: #2a2550;
-    --glow1: rgba(123,79,255,0.35);
-    --glow2: rgba(255,79,163,0.25);
-    --glow3: rgba(79,255,218,0.2);
-  }
+:root {
+  --bg:      #06040f;
+  --surface: #0d0a1e;
+  --card:    #110e22;
+  --card2:   #16132c;
+  --border:  #221e3a;
+  --border2: #2e2850;
+  --accent:  #7c4dff;
+  --accent2: #e040fb;
+  --accent3: #00e5ff;
+  --gold:    #ffd740;
+  --text:    #ede8ff;
+  --sub:     #9b94c4;
+  --muted:   #5c5680;
+  --red:     #ff4444;
+  --g1: rgba(124,77,255,.3);
+  --g2: rgba(224,64,251,.2);
+  --g3: rgba(0,229,255,.15);
+}
 
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior: smooth; }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Nunito', sans-serif;
-    overflow-x: hidden;
-  }
+/* ── PARTICLES ── */
+#canvas-bg{position:fixed;inset:0;z-index:0;pointer-events:none;}
 
-  /* ─── STARS ─── */
-  #stars {
-    position: fixed; top:0; left:0;
-    width:100%; height:100%;
-    pointer-events:none; z-index:0; overflow:hidden;
-  }
-  .star {
-    position: absolute; background: white; border-radius:50%;
-    animation: twinkle var(--d,3s) ease-in-out infinite var(--delay,0s);
-    opacity:0;
-  }
-  @keyframes twinkle {
-    0%,100%{opacity:0;transform:scale(0.5);}
-    50%{opacity:var(--op,.7);transform:scale(1);}
-  }
+/* ── GRAIN ── */
+body::after{
+  content:'';position:fixed;inset:0;z-index:1;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.035'/%3E%3C/svg%3E");
+  opacity:.4;
+}
 
-  /* ─── NOISE ─── */
-  body::before {
-    content:''; position:fixed; inset:0;
-    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events:none; z-index:1; opacity:0.25;
-  }
+/* ── BANNER ── */
+#top-banner{
+  position:fixed;top:0;left:0;right:0;height:300px;z-index:1;
+  pointer-events:none;overflow:hidden;
+  transform:translateY(0);opacity:1;
+  transition:transform .6s cubic-bezier(.4,0,.2,1),opacity .6s ease;
+  will-change:transform,opacity;
+}
+#top-banner.hidden{transform:translateY(-100%);opacity:0;}
+#top-banner img{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:brightness(.6) saturate(1.15);}
+#top-banner::after{content:'';position:absolute;bottom:0;left:0;right:0;height:75%;background:linear-gradient(transparent,var(--bg));}
+#top-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,4,15,.4) 0%,transparent 55%);}
 
-  /* ─── GLOW ORBS ─── */
-  .orb {
-    position:fixed; border-radius:50%; filter:blur(90px);
-    pointer-events:none; z-index:0;
-    animation: orbFloat var(--d,8s) ease-in-out infinite alternate;
-  }
-  @keyframes orbFloat {
-    from{transform:translate(0,0) scale(1);}
-    to{transform:translate(var(--dx,30px),var(--dy,20px)) scale(1.1);}
-  }
-  .orb1{width:500px;height:500px;background:radial-gradient(circle,rgba(123,79,255,.14),transparent 70%);top:5%;left:-8%;--d:10s;--dx:40px;--dy:30px;}
-  .orb2{width:400px;height:400px;background:radial-gradient(circle,rgba(255,79,163,.11),transparent 70%);top:45%;right:-5%;--d:13s;--dx:-30px;--dy:40px;}
-  .orb3{width:350px;height:350px;background:radial-gradient(circle,rgba(79,255,218,.09),transparent 70%);bottom:15%;left:15%;--d:9s;--dx:50px;--dy:-20px;}
+/* ── HERO ── */
+#hero{
+  position:relative;z-index:2;
+  padding:190px 24px 50px;
+  display:flex;flex-direction:column;align-items:center;
+}
 
-  /* ─── TOP FIXED BANNER ─── */
-  #top-banner {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    height: 280px;
-    /* за всем контентом, но над фоном */
-    z-index: 1;
-    pointer-events: none;
-    overflow: hidden;
-    /* анимация появления/скрытия */
-    transform: translateY(0);
-    opacity: 1;
-    transition: transform 0.55s cubic-bezier(.4,0,.2,1), opacity 0.55s ease;
-  }
-  #top-banner.hidden {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  #top-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 25%;
-    display: block;
-    filter: saturate(1.1) brightness(0.7);
-  }
-  /* плавный переход в фон снизу */
-  #top-banner::after {
-    content:'';
-    position:absolute;
-    bottom:0; left:0; right:0;
-    height:70%;
-    background: linear-gradient(to bottom, transparent, var(--bg));
-    pointer-events:none;
-  }
-  /* затемнение сверху */
-  #top-banner::before {
-    content:'';
-    position:absolute;
-    inset:0;
-    background: linear-gradient(180deg, rgba(8,6,18,.35) 0%, transparent 60%);
-    pointer-events:none;
-  }
+.logo-wrap{text-align:center;animation:riseIn 1s cubic-bezier(.16,1,.3,1) both;}
+@keyframes riseIn{from{opacity:0;transform:translateY(36px) scale(.97);}to{opacity:1;transform:none;}}
 
-  /* ─── HERO (контент поверх баннера) ─── */
-  #hero {
-    position: relative;
-    z-index: 2;
-    padding-top: 180px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 40px;
-  }
+.logo-eyebrow{
+  font-size:.7rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--accent3);margin-bottom:18px;
+  display:inline-flex;align-items:center;gap:10px;
+  animation:riseIn 1s .1s cubic-bezier(.16,1,.3,1) both;
+}
+.logo-eyebrow::before,.logo-eyebrow::after{content:'';width:30px;height:1px;background:var(--accent3);opacity:.5;}
 
-  #hero-content {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    padding: 20px 24px 30px;
-    animation: fadeUp 1.2s cubic-bezier(.16,1,.3,1) both;
-  }
-  @keyframes fadeUp {
-    from{opacity:0;transform:translateY(40px);}
-    to{opacity:1;transform:translateY(0);}
-  }
+.logo-main{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(3rem,10vw,7.5rem);
+  font-weight:900;line-height:.95;letter-spacing:-.03em;
+  background:linear-gradient(135deg,#a78bff 0%,#e040fb 45%,#ffd740 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  position:relative;
+  filter:drop-shadow(0 0 40px rgba(124,77,255,.5));
+  animation:logoShine 6s ease-in-out infinite alternate, riseIn 1s .2s cubic-bezier(.16,1,.3,1) both;
+}
+@keyframes logoShine{
+  from{filter:drop-shadow(0 0 25px rgba(124,77,255,.6));}
+  to{filter:drop-shadow(0 0 70px rgba(224,64,251,.8)) drop-shadow(0 0 120px rgba(124,77,255,.4));}
+}
 
-  .logo-text {
-    font-family: 'Unbounded', sans-serif;
-    font-size: clamp(2.8rem, 9vw, 6.5rem);
-    font-weight: 900;
-    letter-spacing: -0.02em;
-    line-height: 1;
-    background: linear-gradient(135deg, var(--accent1) 0%, var(--accent2) 40%, var(--accent4) 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: logoGlow 4s ease-in-out infinite alternate;
-  }
-  @keyframes logoGlow {
-    from{filter:drop-shadow(0 0 20px rgba(123,79,255,.7));}
-    to{filter:drop-shadow(0 0 55px rgba(255,79,163,.9)) drop-shadow(0 0 90px rgba(123,79,255,.5));}
-  }
+.logo-sub{
+  font-size:clamp(.8rem,2vw,1rem);color:var(--sub);
+  margin-top:16px;letter-spacing:.12em;text-transform:uppercase;font-weight:300;
+  animation:riseIn 1s .35s cubic-bezier(.16,1,.3,1) both;
+}
 
-  .hero-sub {
-    font-size: clamp(.9rem,2.5vw,1.1rem);
-    color: var(--muted);
-    margin-top: 12px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    animation: fadeUp 1.2s .3s cubic-bezier(.16,1,.3,1) both;
-  }
+/* ── NAV ── */
+nav{
+  position:relative;z-index:10;
+  width:100%;max-width:860px;margin:36px auto 0;padding:0 20px;
+  animation:riseIn 1s .5s cubic-bezier(.16,1,.3,1) both;
+}
+.nav-pill{
+  display:flex;gap:2px;
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--border);
+  border-radius:18px;padding:5px;
+  backdrop-filter:blur(30px);
+  -webkit-backdrop-filter:blur(30px);
+  flex-wrap:wrap;justify-content:center;
+}
+nav a{
+  color:var(--muted);text-decoration:none;
+  font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:10px 18px;border-radius:13px;
+  transition:color .2s,background .2s,box-shadow .2s;
+}
+nav a:hover{color:var(--text);background:rgba(124,77,255,.18);box-shadow:0 0 24px var(--g1);}
 
-  .official-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: linear-gradient(135deg,rgba(123,79,255,.2),rgba(255,79,163,.15));
-    border: 1px solid rgba(123,79,255,.4);
-    border-radius: 100px;
-    padding: 8px 22px;
-    font-size: .78rem;
-    font-weight: 700;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--accent3);
-    margin-top: 18px;
-    animation: fadeUp 1.2s .5s cubic-bezier(.16,1,.3,1) both;
-    box-shadow: 0 0 20px rgba(79,255,218,.15);
-  }
+/* ── MAIN ── */
+main{position:relative;z-index:2;max-width:1020px;margin:0 auto;padding:70px 24px 120px;}
+section{margin-bottom:100px;}
 
-  /* ─── NAV ─── */
-  nav {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    animation: fadeUp 1.2s .7s cubic-bezier(.16,1,.3,1) both;
-  }
-  .nav-inner {
-    display: flex; gap: 4px;
-    background: rgba(255,255,255,.04);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 6px;
-    backdrop-filter: blur(24px);
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  nav a {
-    color: var(--muted);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: .82rem;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-    padding: 10px 16px;
-    border-radius: 10px;
-    transition: all .25s;
-  }
-  nav a:hover {
-    color: var(--text);
-    background: rgba(123,79,255,.2);
-    box-shadow: 0 0 20px var(--glow1);
-  }
+/* ── SECTION HEADER ── */
+.label{
+  font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:12px;
+  display:flex;align-items:center;gap:12px;
+}
+.label::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(124,77,255,.5),transparent);}
 
-  /* ─── MAIN ─── */
-  main {
-    position: relative;
-    z-index: 2;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 60px 24px 100px;
-  }
+h2{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(1.6rem,4.5vw,2.6rem);
+  font-weight:900;line-height:1.1;margin-bottom:20px;
+  letter-spacing:-.02em;
+}
+h2 em{
+  font-style:normal;
+  background:linear-gradient(90deg,var(--accent2),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
 
-  section { margin-bottom: 80px; }
+p{line-height:1.85;color:var(--sub);font-size:.98rem;font-weight:400;}
+p+p{margin-top:12px;}
+strong{color:var(--text);font-weight:600;}
 
-  .section-label {
-    font-size: .7rem; font-weight: 800;
-    letter-spacing: .22em; text-transform: uppercase;
-    color: var(--accent1); margin-bottom: 10px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .section-label::after {
-    content:''; flex:1; height:1px;
-    background: linear-gradient(to right, var(--accent1), transparent);
-    opacity: .4;
-  }
+/* ── LORE GRID ── */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;margin-top:32px;border-radius:20px;overflow:hidden;border:1px solid var(--border);}
+.lore-cell{
+  background:var(--card);padding:28px 26px;
+  transition:background .3s;position:relative;overflow:hidden;
+}
+.lore-cell::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--lc,linear-gradient(90deg,var(--accent),var(--accent2)));opacity:0;transition:opacity .3s;}
+.lore-cell:hover{background:var(--card2);}
+.lore-cell:hover::after{opacity:1;}
+.cell-num{font-family:'Unbounded',sans-serif;font-size:.65rem;font-weight:700;color:var(--muted);letter-spacing:.2em;margin-bottom:14px;}
+.cell-title{font-family:'Unbounded',sans-serif;font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:10px;}
+.cell-body{font-size:.85rem;color:var(--sub);line-height:1.7;}
 
-  h2 {
-    font-family: 'Unbounded', sans-serif;
-    font-size: clamp(1.5rem,4vw,2.3rem);
-    font-weight: 900; line-height: 1.15;
-    margin-bottom: 18px; color: var(--text);
-  }
-  h2 .hl {
-    background: linear-gradient(90deg, var(--accent2), var(--accent4));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+/* ── VILLAIN ── */
+.villain-wrap{
+  margin-top:32px;
+  border:1px solid rgba(255,68,68,.25);
+  border-radius:20px;overflow:hidden;
+  background:linear-gradient(135deg,rgba(255,40,40,.07),rgba(124,77,255,.05));
+  position:relative;
+}
+.villain-wrap::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,var(--red),var(--accent),transparent);
+}
+.villain-inner{padding:36px 38px;}
+.villain-tag{font-size:.65rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--red);margin-bottom:14px;}
+.villain-title{font-family:'Unbounded',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem);font-weight:900;color:var(--text);margin-bottom:16px;line-height:1.2;}
+.villain-title span{color:var(--red);}
+.villain-body{font-size:.95rem;line-height:1.85;color:var(--sub);}
+.villain-body strong{color:#ff8080;}
 
-  p { line-height: 1.8; color: #b0a8d4; font-size: 1rem; }
-  p+p { margin-top: 10px; }
+/* ── TEAM ── */
+.team-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;}
+.tc{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:14px 20px;
+  display:flex;align-items:center;gap:14px;
+  transition:border-color .25s,background .25s,transform .25s;
+}
+.tc:hover{border-color:var(--accent);background:rgba(124,77,255,.1);transform:translateY(-2px);}
+.tc-dot{
+  width:36px;height:36px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Unbounded',sans-serif;font-size:.7rem;font-weight:900;color:#fff;
+}
+.tc-name{font-family:'Unbounded',sans-serif;font-size:.78rem;font-weight:700;color:var(--text);}
+.tc-role{font-size:.7rem;color:var(--muted);margin-top:2px;font-weight:400;}
 
-  /* ─── LORE GRID ─── */
-  .lore-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(255px,1fr));
-    gap: 16px; margin-top: 26px;
-  }
-  .lore-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 24px;
-    transition: all .3s cubic-bezier(.16,1,.3,1);
-    position: relative; overflow: hidden;
-  }
-  .lore-card::before {
-    content:''; position:absolute; top:0; left:0; right:0;
-    height:2px;
-    background: var(--grad, linear-gradient(90deg,var(--accent1),var(--accent2)));
-    opacity:0; transition: opacity .3s;
-  }
-  .lore-card:hover { transform:translateY(-4px); border-color:rgba(123,79,255,.4); box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 40px var(--glow1); }
-  .lore-card:hover::before { opacity:1; }
-  .lore-card .icon { font-size:2rem; margin-bottom:10px; display:block; }
-  .lore-card h3 { font-family:'Unbounded',sans-serif; font-size:.92rem; font-weight:700; margin-bottom:7px; color:var(--text); }
-  .lore-card p { font-size:.86rem; color:var(--muted); }
+/* ── CONTEST ── */
+.prize-wrap{
+  margin-top:32px;border:1px solid var(--border);border-radius:20px;overflow:hidden;
+}
+.prize-top{
+  padding:32px 36px 28px;
+  background:linear-gradient(135deg,rgba(124,77,255,.1),rgba(224,64,251,.06));
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+.prize-top::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--accent),var(--accent2),transparent);}
+.prize-row{
+  display:flex;align-items:flex-start;gap:16px;padding:22px 36px;
+  border-bottom:1px solid var(--border);
+  transition:background .25s;
+}
+.prize-row:last-child{border-bottom:none;}
+.prize-row:hover{background:rgba(255,255,255,.02);}
+.prize-num{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Unbounded',sans-serif;font-size:.8rem;font-weight:900;
+}
+.p1{background:linear-gradient(135deg,#ffd740,#ff9100);color:#000;}
+.p2{background:linear-gradient(135deg,#cfd8dc,#90a4ae);color:#000;}
+.p3{background:linear-gradient(135deg,#a1887f,#6d4c41);color:#fff;}
+.prize-title{font-family:'Unbounded',sans-serif;font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:5px;}
+.prize-desc{font-size:.82rem;color:var(--sub);line-height:1.6;}
 
-  /* ─── VILLAIN BLOCK ─── */
-  .villain-block {
-    background: linear-gradient(135deg,rgba(255,40,40,.1),rgba(123,79,255,.08));
-    border: 1px solid rgba(255,60,60,.3);
-    border-radius: 24px;
-    padding: 36px;
-    margin-top: 28px;
-    position: relative; overflow: hidden;
-  }
-  .villain-block::before {
-    content:'🔵';
-    position:absolute; right:28px; top:16px;
-    font-size:5rem; opacity:.07;
-  }
-  .villain-block h3 {
-    font-family:'Unbounded',sans-serif;
-    font-size:1.2rem; font-weight:900;
-    color:#ff6060; margin-bottom:12px;
-  }
-  .villain-block p { font-size:.95rem; }
+/* ── RULES ── */
+.rules-list{list-style:none;display:flex;flex-direction:column;gap:1px;margin-top:32px;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+.rule-item{
+  background:var(--card);padding:18px 24px;
+  display:flex;align-items:flex-start;gap:18px;
+  transition:background .25s;
+}
+.rule-item:hover{background:var(--card2);}
+.rn{
+  font-family:'Unbounded',sans-serif;font-size:.65rem;font-weight:900;
+  color:var(--accent3);background:rgba(0,229,255,.08);
+  border-radius:7px;padding:5px 8px;flex-shrink:0;letter-spacing:.1em;
+  margin-top:2px;
+}
+.rule-text{font-size:.9rem;color:var(--sub);line-height:1.7;}
 
-  /* ─── TEAM ─── */
-  .team-grid { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
-  .team-card {
-    background: var(--card2);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 14px 20px;
-    display: flex; align-items: center; gap: 12px;
-    transition: all .3s; cursor:default;
-  }
-  .team-card:hover {
-    background: rgba(123,79,255,.15);
-    border-color: var(--accent1);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px var(--glow1);
-  }
-  .team-avatar {
-    width:42px; height:42px; border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    font-size:1.4rem;
-    background: linear-gradient(135deg,var(--accent1),var(--accent2));
-    flex-shrink:0;
-  }
-  .team-name { font-family:'Unbounded',sans-serif; font-size:.78rem; font-weight:700; color:var(--text); }
-  .team-role { font-size:.7rem; color:var(--muted); margin-top:2px; }
+/* ── UPLOAD ── */
+.drop-zone{
+  border:1.5px dashed rgba(124,77,255,.35);
+  border-radius:18px;padding:50px 30px;text-align:center;
+  cursor:pointer;transition:all .3s;
+  background:rgba(124,77,255,.03);
+  position:relative;overflow:hidden;margin-top:32px;
+}
+.drop-zone:hover,.drop-zone.over{border-color:var(--accent);background:rgba(124,77,255,.08);box-shadow:0 0 50px var(--g1);}
+.drop-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.dz-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:linear-gradient(135deg,rgba(124,77,255,.2),rgba(224,64,251,.15));
+  border:1px solid rgba(124,77,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;font-size:1.4rem;
+}
+.dz-title{font-family:'Unbounded',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:6px;}
+.dz-sub{font-size:.82rem;color:var(--muted);}
 
-  /* ─── PRIZE ─── */
-  .prize-block {
-    background: linear-gradient(135deg,rgba(123,79,255,.12),rgba(255,79,163,.08));
-    border: 1px solid rgba(123,79,255,.3);
-    border-radius: 24px;
-    padding: 38px;
-    position: relative; overflow: hidden;
-    margin-top: 26px;
-  }
-  .prize-block::before { content:'🏆'; position:absolute; right:28px; top:14px; font-size:5rem; opacity:.07; }
-  .prize-list { list-style:none; margin-top:18px; display:flex; flex-direction:column; gap:14px; }
-  .prize-list li { display:flex; align-items:flex-start; gap:14px; font-size:.95rem; color:var(--text); line-height:1.5; }
-  .prize-badge { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; font-size:1rem; flex-shrink:0; font-weight:900; font-family:'Unbounded',sans-serif; }
-  .gold  { background: linear-gradient(135deg,#ffd700,#ff9500); color:#000; }
-  .silver{ background: linear-gradient(135deg,#c0c0c0,#888);    color:#000; }
-  .bronze{ background: linear-gradient(135deg,#cd7f32,#8b4513); color:#fff; }
+#preview-wrap{margin-top:16px;display:none;}
+#preview-img{max-height:210px;border-radius:14px;border:1px solid var(--border2);box-shadow:0 0 30px var(--g1);}
 
-  /* ─── RULES ─── */
-  .rules-list { list-style:none; display:flex; flex-direction:column; gap:12px; margin-top:22px; }
-  .rules-list li {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 15px 18px;
-    font-size:.91rem; color:#c0b8e0;
-    display:flex; align-items:flex-start; gap:12px;
-    transition: border-color .3s; line-height:1.6;
-  }
-  .rules-list li:hover { border-color: rgba(79,255,218,.3); }
-  .rule-num {
-    font-family:'Unbounded',sans-serif; font-size:.72rem; font-weight:900;
-    color:var(--accent3); background:rgba(79,255,218,.1);
-    border-radius:8px; padding:4px 8px; flex-shrink:0;
-  }
+.form-fields{margin-top:18px;display:flex;flex-direction:column;gap:10px;}
+.field{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:12px;padding:14px 18px;
+  color:var(--text);font-family:'Inter',sans-serif;font-size:.9rem;
+  outline:none;transition:border-color .25s,box-shadow .25s;width:100%;
+}
+.field:focus{border-color:var(--accent);box-shadow:0 0 20px rgba(124,77,255,.2);}
+.field::placeholder{color:var(--muted);}
+textarea.field{resize:vertical;min-height:72px;}
 
-  /* ─── UPLOAD ─── */
-  .upload-zone {
-    border: 2px dashed rgba(123,79,255,.4);
-    border-radius: 20px; padding:46px 28px;
-    text-align:center; cursor:pointer;
-    transition: all .3s;
-    background: rgba(123,79,255,.04);
-    position:relative; overflow:hidden;
-    margin-top: 26px;
-  }
-  .upload-zone:hover,.upload-zone.drag-over {
-    border-color:var(--accent1);
-    background:rgba(123,79,255,.1);
-    box-shadow:0 0 40px var(--glow1);
-  }
-  .upload-zone input[type="file"] {
-    position:absolute; inset:0; opacity:0;
-    cursor:pointer; width:100%; height:100%;
-  }
-  .upload-icon { font-size:2.8rem; margin-bottom:10px; }
-  .upload-title { font-family:'Unbounded',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:6px; }
-  .upload-sub { font-size:.82rem; color:var(--muted); }
+.privacy-note{
+  font-size:.78rem;color:var(--muted);
+  background:rgba(0,229,255,.04);
+  border:1px solid rgba(0,229,255,.12);
+  border-radius:10px;padding:12px 16px;
+  line-height:1.6;
+}
+.privacy-note strong{color:var(--accent3);}
 
-  .upload-form { margin-top:18px; display:flex; flex-direction:column; gap:11px; }
-  .upload-form input, .upload-form textarea {
-    background: var(--card); border:1px solid var(--border);
-    border-radius:12px; padding:13px 16px;
-    color:var(--text); font-family:'Nunito',sans-serif;
-    font-size:.93rem; outline:none;
-    transition:border-color .3s; width:100%;
-  }
-  .upload-form input:focus,.upload-form textarea:focus {
-    border-color:var(--accent1); box-shadow:0 0 18px var(--glow1);
-  }
-  .upload-form input::placeholder,.upload-form textarea::placeholder { color:var(--muted); }
-  .upload-form textarea { resize:vertical; min-height:70px; }
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;font-family:'Unbounded',sans-serif;
+  font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  border:none;border-radius:12px;padding:15px 32px;
+  cursor:pointer;transition:transform .25s,box-shadow .25s;
+  box-shadow:0 4px 30px rgba(124,77,255,.35);align-self:flex-start;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 50px rgba(124,77,255,.5),0 0 30px rgba(224,64,251,.3);}
+.btn:active{transform:none;}
 
-  .admin-note {
-    font-size:.78rem; color:var(--muted);
-    background:rgba(255,79,163,.07);
-    border:1px solid rgba(255,79,163,.2);
-    border-radius:10px; padding:10px 14px;
-    display:flex; align-items:flex-start; gap:8px; line-height:1.5;
-  }
-  .admin-note span { font-size:1rem; flex-shrink:0; }
+/* ── GALLERY ── */
+#gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(248px,1fr));
+  gap:14px;margin-top:32px;
+}
+.g-item{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;overflow:hidden;cursor:pointer;position:relative;
+  transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s;
+}
+.g-item:hover{transform:translateY(-5px) scale(1.01);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 40px var(--g1);border-color:rgba(124,77,255,.4);}
+.g-img{width:100%;height:195px;object-fit:cover;display:block;transition:transform .45s;}
+.g-item:hover .g-img{transform:scale(1.07);}
+.g-meta{padding:12px 14px;}
+.g-author{font-family:'Unbounded',sans-serif;font-size:.75rem;font-weight:700;color:var(--text);}
+.g-desc{font-size:.78rem;color:var(--muted);margin-top:3px;line-height:1.4;}
+.g-badge{
+  position:absolute;top:10px;right:10px;
+  font-family:'Unbounded',sans-serif;font-size:.65rem;font-weight:900;
+  padding:4px 11px;border-radius:100px;
+}
+.b1{background:linear-gradient(135deg,#ffd740,#ff9100);color:#000;}
+.b2{background:linear-gradient(135deg,#cfd8dc,#90a4ae);color:#000;}
+.b3{background:linear-gradient(135deg,#a1887f,#6d4c41);color:#fff;}
 
-  #preview-wrap { margin-top:14px; display:none; }
-  #preview-wrap img { max-height:200px; border-radius:12px; border:2px solid var(--accent1); box-shadow:0 0 28px var(--glow1); }
+.empty-state{grid-column:1/-1;text-align:center;padding:70px 20px;}
+.empty-state p{font-size:.95rem;color:var(--muted);margin-top:14px;}
+.empty-line{width:60px;height:1px;background:var(--border2);margin:16px auto;}
 
-  .btn-submit {
-    display:inline-flex; align-items:center; justify-content:center; gap:10px;
-    background: linear-gradient(135deg,var(--accent1),var(--accent2));
-    color:white; font-family:'Unbounded',sans-serif;
-    font-size:.82rem; font-weight:700; letter-spacing:.06em;
-    text-transform:uppercase; border:none;
-    border-radius:12px; padding:15px 30px;
-    cursor:pointer; transition:all .3s;
-    box-shadow:0 4px 30px var(--glow1); align-self:flex-start;
-  }
-  .btn-submit:hover { transform:translateY(-2px); box-shadow:0 8px 50px rgba(123,79,255,.5),0 0 30px rgba(255,79,163,.3); }
-  .btn-submit:active { transform:translateY(0); }
+/* ── LIGHTBOX ── */
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:1000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(16px);}
+#lightbox.open{display:flex;animation:fadeIn .2s ease;}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+#lb-img{max-width:90vw;max-height:86vh;border-radius:14px;box-shadow:0 0 80px rgba(124,77,255,.4);}
+#lb-close{position:absolute;top:20px;right:26px;font-size:1.6rem;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;transition:color .2s;font-weight:300;line-height:1;}
+#lb-close:hover{color:#fff;}
 
-  /* ─── GALLERY ─── */
-  #gallery {
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
-    gap:16px; margin-top:26px;
-  }
-  .gallery-item {
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:16px; overflow:hidden;
-    transition:all .3s cubic-bezier(.16,1,.3,1);
-    cursor:pointer; position:relative;
-  }
-  .gallery-item:hover { transform:translateY(-4px) scale(1.01); box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 40px var(--glow1); border-color:rgba(123,79,255,.5); }
-  .gallery-item img { width:100%; height:200px; object-fit:cover; display:block; transition:transform .4s; }
-  .gallery-item:hover img { transform:scale(1.06); }
-  .gallery-meta { padding:11px 13px; }
-  .gallery-author { font-family:'Unbounded',sans-serif; font-size:.76rem; font-weight:700; color:var(--text); }
-  .gallery-desc { font-size:.78rem; color:var(--muted); margin-top:3px; line-height:1.4; }
-  .gallery-place { position:absolute; top:9px; right:9px; font-size:.68rem; font-weight:900; font-family:'Unbounded',sans-serif; padding:4px 10px; border-radius:100px; }
-  .place-1{background:linear-gradient(135deg,#ffd700,#ff9500);color:#000;}
-  .place-2{background:linear-gradient(135deg,#c0c0c0,#888);color:#000;}
-  .place-3{background:linear-gradient(135deg,#cd7f32,#8b4513);color:#fff;}
+/* ── ADMIN TRIGGER ── */
+#admin-btn{
+  position:fixed;bottom:24px;right:24px;
+  width:44px;height:44px;border-radius:12px;
+  background:rgba(255,255,255,.04);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;cursor:pointer;z-index:500;
+  backdrop-filter:blur(12px);transition:all .25s;
+}
+#admin-btn:hover{background:rgba(124,77,255,.15);border-color:var(--accent);box-shadow:0 0 20px var(--g1);}
 
-  .empty-gallery { grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--muted); }
-  .empty-gallery .empty-icon { font-size:3.5rem; margin-bottom:14px; }
+/* ── ADMIN MODAL ── */
+#admin-modal{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(16px);padding:20px;}
+#admin-modal.open{display:flex;animation:fadeIn .25s ease;}
+.admin-box{
+  background:var(--card2);border:1px solid rgba(124,77,255,.3);
+  border-radius:22px;width:100%;max-width:840px;max-height:90vh;
+  overflow-y:auto;padding:36px;
+  box-shadow:0 0 80px rgba(124,77,255,.2);position:relative;
+}
+.admin-box::-webkit-scrollbar{width:4px;}
+.admin-box::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
+.admin-head{font-family:'Unbounded',sans-serif;font-size:1.1rem;font-weight:900;color:var(--text);margin-bottom:24px;}
+.admin-head span{color:var(--accent);}
+#admin-login p{color:var(--sub);font-size:.9rem;margin-bottom:16px;}
+.admin-close{position:absolute;top:18px;right:22px;background:none;border:none;color:rgba(255,255,255,.4);font-size:1.5rem;cursor:pointer;transition:color .2s;font-weight:300;line-height:1;}
+.admin-close:hover{color:#fff;}
+.admin-entries{display:flex;flex-direction:column;gap:12px;margin-top:18px;}
+.ae{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:16px 18px;
+  display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:start;
+}
+.ae img{width:76px;height:76px;object-fit:cover;border-radius:10px;border:1px solid var(--border2);}
+.ae-name{font-family:'Unbounded',sans-serif;font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:4px;}
+.ae-contact{font-size:.8rem;color:var(--accent3);margin-bottom:3px;}
+.ae-chars{font-size:.78rem;color:#c0b8e8;}
+.ae-desc{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:2px;}
+.ae-time{font-size:.7rem;color:var(--muted);margin-top:4px;}
+.ae-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px;}
+.ap{font-family:'Unbounded',sans-serif;font-size:.62rem;font-weight:900;border:none;border-radius:7px;padding:6px 11px;cursor:pointer;transition:opacity .2s,transform .2s;opacity:.85;}
+.ap:hover{opacity:1;transform:translateY(-1px);}
+.ap1{background:linear-gradient(135deg,#ffd740,#ff9100);color:#000;}
+.ap2{background:linear-gradient(135deg,#cfd8dc,#90a4ae);color:#000;}
+.ap3{background:linear-gradient(135deg,#a1887f,#6d4c41);color:#fff;}
+.ap0{background:rgba(255,255,255,.07);color:var(--muted);}
+.ap-del{font-size:.72rem;font-weight:600;font-family:'Inter',sans-serif;background:rgba(255,68,68,.12);border:1px solid rgba(255,68,68,.25);color:#ff8080;border-radius:7px;padding:6px 11px;cursor:pointer;transition:background .2s;}
+.ap-del:hover{background:rgba(255,68,68,.25);}
+.ae-place{font-size:.72rem;color:var(--gold);margin-top:6px;font-weight:600;}
 
-  /* ─── LIGHTBOX ─── */
-  #lightbox {
-    position:fixed; inset:0;
-    background:rgba(0,0,0,.92);
-    z-index:1000; display:none;
-    align-items:center; justify-content:center;
-    backdrop-filter:blur(12px);
-  }
-  #lightbox.open { display:flex; animation:lbFade .2s ease; }
-  @keyframes lbFade{from{opacity:0;}to{opacity:1;}}
-  #lightbox img { max-width:90vw; max-height:85vh; border-radius:16px; box-shadow:0 0 100px rgba(123,79,255,.4); }
-  #lb-close { position:absolute; top:18px; right:22px; font-size:2rem; color:white; cursor:pointer; opacity:.55; transition:opacity .2s; background:none; border:none; line-height:1; }
-  #lb-close:hover { opacity:1; }
+/* ── FOOTER ── */
+footer{
+  position:relative;z-index:2;
+  border-top:1px solid var(--border);
+  padding:44px 24px 60px;
+  text-align:center;
+}
+.ft-logo{font-family:'Unbounded',sans-serif;font-size:1.1rem;font-weight:900;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;}
+footer p{font-size:.8rem;color:var(--muted);line-height:1.8;}
 
-  /* ─── ADMIN PANEL ─── */
-  #admin-trigger {
-    position:fixed; bottom:22px; right:22px;
-    width:46px; height:46px; border-radius:50%;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.1);
-    display:flex; align-items:center; justify-content:center;
-    font-size:1.2rem; cursor:pointer;
-    transition:all .3s; z-index:500;
-    backdrop-filter:blur(10px);
-  }
-  #admin-trigger:hover { background:rgba(123,79,255,.2); border-color:var(--accent1); box-shadow:0 0 20px var(--glow1); }
+/* ── NOTIF ── */
+#notif{
+  position:fixed;bottom:30px;left:50%;
+  transform:translateX(-50%) translateY(80px);
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;font-family:'Unbounded',sans-serif;font-size:.76rem;font-weight:700;
+  padding:13px 26px;border-radius:100px;
+  z-index:9999;transition:transform .4s cubic-bezier(.16,1,.3,1);
+  pointer-events:none;box-shadow:0 8px 40px rgba(124,77,255,.45);white-space:nowrap;
+}
+#notif.show{transform:translateX(-50%) translateY(0);}
 
-  #admin-modal {
-    position:fixed; inset:0;
-    background:rgba(0,0,0,.88);
-    z-index:2000; display:none;
-    align-items:center; justify-content:center;
-    backdrop-filter:blur(14px);
-    padding:20px;
-  }
-  #admin-modal.open { display:flex; animation:lbFade .25s ease; }
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
 
-  .admin-box {
-    background:var(--card2);
-    border:1px solid rgba(123,79,255,.4);
-    border-radius:22px;
-    width:100%; max-width:820px;
-    max-height:88vh;
-    overflow-y:auto;
-    padding:34px;
-    box-shadow:0 0 80px rgba(123,79,255,.25);
-    position:relative;
-  }
-  .admin-box::-webkit-scrollbar{width:5px;}
-  .admin-box::-webkit-scrollbar-track{background:transparent;}
-  .admin-box::-webkit-scrollbar-thumb{background:var(--accent1);border-radius:3px;}
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
 
-  .admin-title {
-    font-family:'Unbounded',sans-serif;
-    font-size:1.2rem; font-weight:900;
-    color:var(--text); margin-bottom:22px;
-    display:flex; align-items:center; gap:10px;
-  }
-  .admin-title span { color:var(--accent1); }
-
-  #admin-login-wrap { text-align:center; }
-  #admin-login-wrap p { margin-bottom:16px; font-size:.95rem; color:var(--muted); }
-  .admin-input {
-    background:var(--card); border:1px solid var(--border);
-    border-radius:12px; padding:13px 18px;
-    color:var(--text); font-family:'Nunito',sans-serif;
-    font-size:.95rem; outline:none;
-    transition:border-color .3s; width:100%; max-width:340px;
-    display:block; margin:0 auto 14px;
-  }
-  .admin-input:focus { border-color:var(--accent1); box-shadow:0 0 16px var(--glow1); }
-
-  .admin-entries { display:flex; flex-direction:column; gap:14px; margin-top:20px; }
-  .admin-entry {
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:14px; padding:16px 18px;
-    display:grid; grid-template-columns:80px 1fr;
-    gap:14px; align-items:start;
-  }
-  .admin-entry img { width:80px; height:80px; object-fit:cover; border-radius:10px; border:2px solid var(--border); flex-shrink:0; }
-  .admin-entry-info { display:flex; flex-direction:column; gap:4px; }
-  .admin-entry-name { font-family:'Unbounded',sans-serif; font-size:.8rem; font-weight:700; color:var(--text); }
-  .admin-entry-contact { font-size:.82rem; color:var(--accent3); }
-  .admin-entry-char { font-size:.8rem; color:#d0c8f8; }
-  .admin-entry-time { font-size:.72rem; color:var(--muted); }
-  .admin-entry-desc { font-size:.8rem; color:var(--muted); font-style:italic; }
-
-  .place-buttons { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
-  .place-btn {
-    font-family:'Unbounded',sans-serif;
-    font-size:.65rem; font-weight:900;
-    border:none; border-radius:8px;
-    padding:6px 12px; cursor:pointer;
-    transition:all .25s; opacity:.8;
-  }
-  .place-btn:hover { opacity:1; transform:translateY(-1px); }
-  .pb-1{background:linear-gradient(135deg,#ffd700,#ff9500);color:#000;}
-  .pb-2{background:linear-gradient(135deg,#c0c0c0,#888);color:#000;}
-  .pb-3{background:linear-gradient(135deg,#cd7f32,#8b4513);color:#fff;}
-  .pb-0{background:rgba(255,255,255,.08);color:var(--muted);}
-  .delete-btn {
-    font-size:.7rem; font-weight:700; font-family:'Nunito',sans-serif;
-    background:rgba(255,60,60,.15); border:1px solid rgba(255,60,60,.3);
-    color:#ff7070; border-radius:8px; padding:6px 12px;
-    cursor:pointer; transition:all .25s;
-  }
-  .delete-btn:hover { background:rgba(255,60,60,.3); }
-
-  .admin-close {
-    position:absolute; top:16px; right:20px;
-    font-size:1.8rem; color:white; cursor:pointer;
-    opacity:.5; transition:opacity .2s;
-    background:none; border:none; line-height:1;
-  }
-  .admin-close:hover { opacity:1; }
-
-  /* ─── NOTIF ─── */
-  #notif {
-    position:fixed; bottom:28px; left:50%;
-    transform:translateX(-50%) translateY(100px);
-    background:linear-gradient(135deg,var(--accent1),var(--accent2));
-    color:white; font-family:'Unbounded',sans-serif;
-    font-size:.82rem; font-weight:700;
-    padding:13px 26px; border-radius:100px;
-    z-index:9999; transition:transform .4s cubic-bezier(.16,1,.3,1);
-    pointer-events:none; box-shadow:0 8px 40px rgba(123,79,255,.5);
-    white-space:nowrap;
-  }
-  #notif.show { transform:translateX(-50%) translateY(0); }
-
-  /* ─── FOOTER ─── */
-  footer {
-    position:relative; z-index:2;
-    text-align:center; padding:36px 24px 56px;
-    border-top:1px solid var(--border);
-    color:var(--muted); font-size:.83rem;
-  }
-  footer .ft-logo {
-    font-family:'Unbounded',sans-serif;
-    font-size:1.15rem; font-weight:900;
-    background:linear-gradient(90deg,var(--accent1),var(--accent2));
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-    background-clip:text; margin-bottom:8px;
-  }
-
-  ::-webkit-scrollbar{width:6px;}
-  ::-webkit-scrollbar-track{background:var(--bg);}
-  ::-webkit-scrollbar-thumb{background:var(--accent1);border-radius:3px;}
-
-  @media(max-width:600px){
-    .prize-block,.villain-block{padding:22px 18px;}
-    .upload-zone{padding:28px 14px;}
-    nav a{font-size:.74rem;padding:8px 11px;}
-    #top-banner{height:190px;}
-    #hero{padding-top:140px;}
-    .admin-entry{grid-template-columns:60px 1fr;}
-    .admin-entry img{width:60px;height:60px;}
-  }
+@media(max-width:640px){
+  #hero{padding-top:150px;}
+  #top-banner{height:220px;}
+  .villain-inner{padding:24px 20px;}
+  .prize-row{padding:18px 20px;}
+  .ae{grid-template-columns:60px 1fr;}
+  .ae img{width:60px;height:60px;}
+  nav a{font-size:.7rem;padding:9px 12px;}
+}
 </style>
 </head>
 <body>
 
-<div id="stars"></div>
-<div class="orb orb1"></div>
-<div class="orb orb2"></div>
-<div class="orb orb3"></div>
+<canvas id="canvas-bg"></canvas>
 
-<!-- ─── FIXED TOP BANNER ─── -->
+<!-- BANNER -->
 <div id="top-banner">
-  <img src="photo_2026-06-03_01-41-54.jpg" alt="Забудь Всё — персонажи">
+  <img src="photo_2026-06-03_01-41-54.jpg" alt="Забудь Всё">
 </div>
 
-<!-- ─── HERO ─── -->
+<!-- HERO -->
 <div id="hero">
-  <div id="hero-content">
-    <div class="logo-text">ЗАБУДЬ ВСЁ</div>
-    <div class="hero-sub">Авторский анимационный сериал</div>
-    <div class="official-badge">✦ Официальный сайт команды аниматоров</div>
+  <div class="logo-wrap">
+    <div class="logo-eyebrow">Официальный сайт</div>
+    <div class="logo-main">ЗАБУДЬ ВСЁ</div>
+    <div class="logo-sub">Авторский анимационный сериал</div>
   </div>
   <nav>
-    <div class="nav-inner">
+    <div class="nav-pill">
       <a href="#about">О сериале</a>
       <a href="#villain">Злодей</a>
       <a href="#team">Команда</a>
@@ -650,235 +466,162 @@
 
 <main>
 
-  <!-- ─── О СЕРИАЛЕ ─── -->
-  <section id="about">
-    <div class="section-label">Лор</div>
-    <h2>Что такое <span class="hl">«Забудь Всё»?</span></h2>
-    <p>«Забудь Всё» — безумный, рофельный и неожиданно глубокий авторский анимационный сериал, созданный командой независимых аниматоров. Это история о мире, где всё не так, как кажется, а за каждым углом — либо абсурдный твист, либо серьёзный лор, который застаёт врасплох.</p>
-    <p>Сериал сочетает взрывной юмор, неожиданные сюжетные повороты и отборные пасхалки в каждой серии. Чем больше смотришь — тем больше замечаешь.</p>
-    <div class="lore-grid">
-      <div class="lore-card" style="--grad:linear-gradient(90deg,#7b4fff,#ff4fa3)">
-        <span class="icon">📼</span>
-        <h3>Мир сериала</h3>
-        <p>Вселенная «Забудь Всё» — странное место, где обычные предметы оказываются ключевыми персонажами, а логика существует ровно до следующей сцены.</p>
+  <!-- О СЕРИАЛЕ -->
+  <section id="about" class="reveal">
+    <div class="label">Лор</div>
+    <h2>Что такое <em>«Забудь Всё»</em></h2>
+    <p>«Забудь Всё» — безумный, абсурдный и неожиданно цепляющий авторский анимационный сериал. История о мире, где всё не так, как кажется, а за каждым углом — либо чистый рофл, либо неожиданно серьёзный лор, который застаёт врасплох.</p>
+    <p>Сочетание взрывного юмора, неожиданных твистов и пасхалок в каждой серии. Чем больше смотришь — тем больше замечаешь.</p>
+    <div class="grid-3">
+      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent),var(--accent2))">
+        <div class="cell-num">001</div>
+        <div class="cell-title">Мир сериала</div>
+        <div class="cell-body">Вселенная, где обычные предметы — полноценные персонажи, а логика работает ровно до следующей сцены.</div>
       </div>
-      <div class="lore-card" style="--grad:linear-gradient(90deg,#4fffda,#7b4fff)">
-        <span class="icon">🎭</span>
-        <h3>Персонажи</h3>
-        <p>Каждый герой — личность. У каждого своя роль, свой характер и своя история. И да, среди них есть синяя изолента.</p>
+      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent2),var(--gold))">
+        <div class="cell-num">002</div>
+        <div class="cell-title">Персонажи</div>
+        <div class="cell-body">Каждый герой — личность. Своя история, свой характер, своя роль в большой игре. И да, среди них есть синяя изолента.</div>
       </div>
-      <div class="lore-card" style="--grad:linear-gradient(90deg,#ffd84f,#ff4fa3)">
-        <span class="icon">🥚</span>
-        <h3>Пасхалки</h3>
-        <p>Каждая серия — это охота за секретами. Третья серия будет особенной: в ней спрятан след победителя нашего конкурса.</p>
+      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--gold),var(--accent3))">
+        <div class="cell-num">003</div>
+        <div class="cell-title">Пасхалки</div>
+        <div class="cell-body">Охота за деталями — часть просмотра. 3-я серия будет особенной: в ней появится след победителя нашего конкурса.</div>
       </div>
-      <div class="lore-card" style="--grad:linear-gradient(90deg,#ff4fa3,#7b4fff)">
-        <span class="icon">😂</span>
-        <h3>Юмор</h3>
-        <p>Абсурд, самоирония, внезапные серьёзные моменты посреди полного рофла. «Забудь Всё» — это не обычный мультик.</p>
+      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent3),var(--accent))">
+        <div class="cell-num">004</div>
+        <div class="cell-title">Юмор</div>
+        <div class="cell-body">Абсурд, самоирония, внезапная серьёзность посреди полного хаоса. «Забудь Всё» — это не обычный мультик.</div>
       </div>
-      <div class="lore-card" style="--grad:linear-gradient(90deg,#4fffda,#ffd84f)">
-        <span class="icon">🎬</span>
-        <h3>Авторский стиль</h3>
-        <p>Каждый аниматор вносит кусочек себя — именно поэтому каждая серия ощущается по-особенному.</p>
+      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent),var(--accent3))">
+        <div class="cell-num">005</div>
+        <div class="cell-title">Авторский стиль</div>
+        <div class="cell-body">Каждый аниматор вносит кусочек себя — поэтому каждая серия ощущается по-особенному.</div>
       </div>
-      <div class="lore-card" style="--grad:linear-gradient(90deg,#7b4fff,#4fffda)">
-        <span class="icon">🌀</span>
-        <h3>Лор</h3>
-        <p>За рофлом скрывается настоящая мифология. Кто забыл? Кого забыли? И что вообще происходит?</p>
+      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent2),var(--accent))">
+        <div class="cell-num">006</div>
+        <div class="cell-title">Лор</div>
+        <div class="cell-body">За рофлом скрывается настоящая мифология. Кто забыл? Кого забыли? Что вообще происходит?</div>
       </div>
     </div>
   </section>
 
-  <!-- ─── ЗЛОДЕЙ ─── -->
-  <section id="villain">
-    <div class="section-label">1 сезон</div>
-    <h2>Главный злодей — <span class="hl">Синяя Изолента</span></h2>
-    <div class="villain-block">
-      <h3>🔵 Тот, кого забыли</h3>
-      <p>Синяя изолента — главный злодей первого сезона «Забудь Всё». История этого персонажа трагична и абсурдна одновременно: аниматоры буквально <strong>забыли про него</strong>. Он существовал в мире сериала, но был стёрт из памяти — и теперь он хочет напомнить о себе любой ценой.</p>
-      <p style="margin-top:10px;">Синяя изолента скрепляет, сдерживает и запечатывает. Некоторые говорят, что именно она удерживает этот мир от распада. Другие думают, что она и есть причина всех проблем.</p>
-      <p style="margin-top:10px; color:var(--accent2); font-weight:700;">⚠️ Кстати — хочешь нарисовать арт с Синей Изолентой? Это засчитывается как персонаж из вселенной «Забудь Всё»!</p>
+  <!-- ЗЛОДЕЙ -->
+  <section id="villain" class="reveal">
+    <div class="label">1 сезон</div>
+    <h2>Главный злодей — <em>Синяя Изолента</em></h2>
+    <div class="villain-wrap">
+      <div class="villain-inner">
+        <div class="villain-tag">Персонаж · 1 сезон</div>
+        <div class="villain-title">Тот, кого <span>забыли</span></div>
+        <p class="villain-body">Синяя изолента — главный злодей первого сезона «Забудь Всё». История трагичная и абсурдная одновременно: аниматоры буквально <strong>забыли про него</strong>. Он существовал в мире сериала, но был стёрт из памяти — и теперь хочет напомнить о себе любой ценой.</p>
+        <p class="villain-body" style="margin-top:12px;">Синяя изолента скрепляет, сдерживает и запечатывает. Одни думают, что именно она удерживает этот мир от распада. Другие — что она и есть причина всех проблем.</p>
+        <p class="villain-body" style="margin-top:14px;color:rgba(255,100,100,.9);font-weight:500;">Хочешь нарисовать арт с Синей Изолентой? Засчитывается как персонаж из вселенной «Забудь Всё».</p>
+      </div>
     </div>
   </section>
 
-  <!-- ─── КОМАНДА ─── -->
-  <section id="team">
-    <div class="section-label">Аниматоры</div>
-    <h2>Команда <span class="hl">«Забудь Всё»</span></h2>
-    <p>Сериал создаётся силами этих прекрасных людей. Каждый вкладывает частичку себя в каждую серию.</p>
+  <!-- КОМАНДА -->
+  <section id="team" class="reveal">
+    <div class="label">Аниматоры</div>
+    <h2>Команда <em>«Забудь Всё»</em></h2>
+    <p>Сериал создаётся этими людьми. Каждый вкладывает кусочек себя в каждую серию.</p>
     <div class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar">✍️</div>
+      <div class="tc"><div class="tc-dot">АН</div><div><div class="tc-name">Ананас</div><div class="tc-role">Главный аниматор</div></div></div>
+      <div class="tc"><div class="tc-dot">СК</div><div><div class="tc-name">Скотч</div><div class="tc-role">Сценарист</div></div></div>
+      <div class="tc"><div class="tc-dot">КР</div><div><div class="tc-name">Крикс</div><div class="tc-role">Аниматор</div></div></div>
+      <div class="tc"><div class="tc-dot">СТ</div><div><div class="tc-name">Стик</div><div class="tc-role">Аудиодизайн</div></div></div>
+      <div class="tc"><div class="tc-dot">ЛБ</div><div><div class="tc-name">Лебби</div><div class="tc-role">Аниматор</div></div></div>
+      <div class="tc"><div class="tc-dot">АР</div><div><div class="tc-name">Артинс</div><div class="tc-role">Создатель сайта</div></div></div>
+      <div class="tc"><div class="tc-dot">БЛ</div><div><div class="tc-name">Блэк</div><div class="tc-role">Аниматор</div></div></div>
+      <div class="tc"><div class="tc-dot">+</div><div><div class="tc-name">...и приятели</div><div class="tc-role">Команда «Забудь Всё»</div></div></div>
+    </div>
+  </section>
+
+  <!-- КОНКУРС -->
+  <section id="contest" class="reveal">
+    <div class="label">Событие</div>
+    <h2>Конкурс <em>фан-артов</em></h2>
+    <p>Команда официально объявляет конкурс фан-арта «Забудь Всё». Лучшие работы останутся на сайте навсегда, а победитель получит кое-что по-настоящему особенное.</p>
+    <div class="prize-wrap">
+      <div class="prize-top">
+        <div class="label" style="margin-bottom:10px;">Призы</div>
+        <h3 style="font-family:'Unbounded',sans-serif;font-size:1.1rem;font-weight:900;color:var(--text);">Что ждёт победителей</h3>
+      </div>
+      <div class="prize-row">
+        <div class="prize-num p1">1</div>
         <div>
-          <div class="team-name">Скотч</div>
-          <div class="team-role">Сценарист</div>
+          <div class="prize-title">Пасхалка в 3-й серии</div>
+          <div class="prize-desc">Отсылка на твой арт или твой персонаж появится в 3-й серии «Забудь Всё». Работа навсегда остаётся на сайте с отметкой победителя.</div>
         </div>
       </div>
-      <div class="team-card">
-        <div class="team-avatar">🍍</div>
+      <div class="prize-row">
+        <div class="prize-num p2">2</div>
         <div>
-          <div class="team-name">Ананас</div>
-          <div class="team-role">Главный аниматор</div>
+          <div class="prize-title">Почётное место в галерее</div>
+          <div class="prize-desc">Арт навсегда остаётся на сайте с серебряной отметкой призёра.</div>
         </div>
       </div>
-      <div class="team-card">
-        <div class="team-avatar">⚡</div>
+      <div class="prize-row">
+        <div class="prize-num p3">3</div>
         <div>
-          <div class="team-name">Крикс</div>
-          <div class="team-role">Аниматор</div>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">🎧</div>
-        <div>
-          <div class="team-name">Стик</div>
-          <div class="team-role">Аудиодизайн</div>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">🎵</div>
-        <div>
-          <div class="team-name">Лебби</div>
-          <div class="team-role">Аниматор</div>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">💻</div>
-        <div>
-          <div class="team-name">Артинс</div>
-          <div class="team-role">Создатель сайта</div>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">🖤</div>
-        <div>
-          <div class="team-name">Блэк</div>
-          <div class="team-role">Аниматор</div>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">✨</div>
-        <div>
-          <div class="team-name">...и приятели</div>
-          <div class="team-role">Команда «Забудь Всё»</div>
+          <div class="prize-title">Место в галерее</div>
+          <div class="prize-desc">Работа сохраняется с бронзовой отметкой призёра.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── КОНКУРС ─── -->
-  <section id="contest">
-    <div class="section-label">Событие</div>
-    <h2>Конкурс <span class="hl">фан-артов</span></h2>
-    <p>Команда аниматоров официально объявляет конкурс фан-арта «Забудь Всё»! Мы хотим видеть ваш взгляд на наших персонажей. Лучшие работы останутся на этом сайте навсегда, а победитель получит кое-что по-настоящему особенное.</p>
-    <div class="prize-block">
-      <div class="section-label" style="margin-bottom:8px;">Призы</div>
-      <h3 style="font-family:'Unbounded',sans-serif;font-size:1.2rem;color:var(--text);">Что ждёт победителей?</h3>
-      <ul class="prize-list">
-        <li>
-          <span class="prize-badge gold">1</span>
-          <div>
-            <strong>🥇 1-е место — ПАСХАЛКА В 3-Й СЕРИИ!</strong><br>
-            <span style="color:var(--muted);font-size:.88rem;">Отсылка на твой арт или твой персонаж появится в 3-й серии «Забудь Всё». Плюс твоя работа навсегда остаётся на сайте с отметкой победителя.</span>
-          </div>
-        </li>
-        <li>
-          <span class="prize-badge silver">2</span>
-          <div>
-            <strong>🥈 2-е место — Почётное место в галерее</strong><br>
-            <span style="color:var(--muted);font-size:.88rem;">Арт навсегда остаётся на сайте с серебряной отметкой призёра.</span>
-          </div>
-        </li>
-        <li>
-          <span class="prize-badge bronze">3</span>
-          <div>
-            <strong>🥉 3-е место — Место в галерее</strong><br>
-            <span style="color:var(--muted);font-size:.88rem;">Работа сохраняется с бронзовой отметкой призёра.</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ─── ПРАВИЛА ─── -->
-  <section id="rules">
-    <div class="section-label">Условия участия</div>
-    <h2><span class="hl">Правила</span> конкурса</h2>
+  <!-- ПРАВИЛА -->
+  <section id="rules" class="reveal">
+    <div class="label">Условия участия</div>
+    <h2><em>Правила</em> конкурса</h2>
     <ul class="rules-list">
-      <li>
-        <span class="rule-num">01</span>
-        <span><strong>Главное условие:</strong> на арте обязательно должны быть изображены <strong>минимум 2–3 персонажа</strong> — члены команды аниматоров (Скотч, Ананас, Крикс, Стик, Лебби, Артинс, Блэк и др.) или персонажи из вселенной «Забудь Всё».</span>
-      </li>
-      <li>
-        <span class="rule-num">02</span>
-        <span>Объекты вселенной считаются! <strong>Синяя Изолента</strong> (главный злодей 1 сезона) и другие персонажи из мира сериала — полноценные участники арта.</span>
-      </li>
-      <li>
-        <span class="rule-num">03</span>
-        <span><strong>Свои персонажи — приветствуются!</strong> Можно добавить собственного OC (оригинального персонажа) в арт, если рядом с ним есть хотя бы 2 персонажа из «Забудь Всё» или команды аниматоров.</span>
-      </li>
-      <li>
-        <span class="rule-num">04</span>
-        <span>Арт должен быть <strong>оригинальным</strong> — твоей собственной работой. Никаких прямых трейсов без значительных изменений.</span>
-      </li>
-      <li>
-        <span class="rule-num">05</span>
-        <span>Можно использовать <strong>любую технику</strong>: цифровой арт, рисунок от руки, коллаж. Важна идея и исполнение.</span>
-      </li>
-      <li>
-        <span class="rule-num">06</span>
-        <span>Загружая работу, ты соглашаешься, что <strong>арт может быть опубликован на этом сайте</strong> и упомянут командой «Забудь Всё» с указанием автора.</span>
-      </li>
-      <li>
-        <span class="rule-num">07</span>
-        <span><strong>Один участник — одна работа.</strong> Хочешь заменить? Загрузи новый арт и напиши в описании об этом.</span>
-      </li>
-      <li>
-        <span class="rule-num">08</span>
-        <span>Никакого контента 18+, агрессии, политики или материалов не по теме. Будь собой, <strong>уважай других</strong>.</span>
-      </li>
+      <li class="rule-item"><span class="rn">01</span><span class="rule-text"><strong>Главное условие:</strong> на арте обязательно должны быть изображены минимум 2–3 персонажа — члены команды аниматоров (Скотч, Ананас, Крикс, Стик, Лебби, Артинс, Блэк и др.) или персонажи из вселенной «Забудь Всё».</span></li>
+      <li class="rule-item"><span class="rn">02</span><span class="rule-text">Объекты вселенной считаются. <strong>Синяя Изолента</strong> (главный злодей 1 сезона) и другие персонажи из мира сериала — полноценные участники арта.</span></li>
+      <li class="rule-item"><span class="rn">03</span><span class="rule-text"><strong>Свои персонажи приветствуются.</strong> Можно добавить собственного OC в арт, если рядом с ним есть хотя бы 2 персонажа из «Забудь Всё» или команды аниматоров.</span></li>
+      <li class="rule-item"><span class="rn">04</span><span class="rule-text">Арт должен быть <strong>оригинальным</strong> — твоей собственной работой. Никаких прямых трейсов без значительных изменений.</span></li>
+      <li class="rule-item"><span class="rn">05</span><span class="rule-text">Можно использовать <strong>любую технику</strong>: цифровой арт, рисунок от руки, коллаж. Важны идея и исполнение.</span></li>
+      <li class="rule-item"><span class="rn">06</span><span class="rule-text">Загружая работу, ты соглашаешься, что арт может быть опубликован на этом сайте и упомянут командой «Забудь Всё» с указанием автора.</span></li>
+      <li class="rule-item"><span class="rn">07</span><span class="rule-text"><strong>Один участник — одна работа.</strong> Хочешь заменить? Загрузи новый арт и напиши об этом в описании.</span></li>
+      <li class="rule-item"><span class="rn">08</span><span class="rule-text">Никакого контента 18+, агрессии и материалов не по теме. Уважай других участников.</span></li>
     </ul>
   </section>
 
-  <!-- ─── ЗАГРУЗКА ─── -->
-  <section id="upload">
-    <div class="section-label">Участвовать</div>
-    <h2>Загрузить <span class="hl">свой арт</span></h2>
-    <p>Заполни форму ниже и отправь свою работу! Арт сразу появится в галерее.</p>
+  <!-- ЗАГРУЗКА -->
+  <section id="upload" class="reveal">
+    <div class="label">Участвовать</div>
+    <h2>Загрузить <em>свой арт</em></h2>
+    <p>Заполни форму и отправь работу. Арт сразу появится в галерее.</p>
 
-    <div class="upload-zone" id="drop-zone">
+    <div class="drop-zone" id="drop-zone">
       <input type="file" id="file-input" accept="image/*">
-      <div class="upload-icon">🖼️</div>
-      <div class="upload-title">Перетащи изображение сюда</div>
-      <div class="upload-sub">или нажми, чтобы выбрать файл (JPG, PNG, GIF, WebP)</div>
+      <div class="dz-icon">↑</div>
+      <div class="dz-title">Перетащи изображение сюда</div>
+      <div class="dz-sub">или нажми, чтобы выбрать файл — JPG, PNG, GIF, WebP</div>
     </div>
-    <div id="preview-wrap">
-      <img id="preview-img" src="" alt="Превью">
-    </div>
+    <div id="preview-wrap"><img id="preview-img" src="" alt="Превью"></div>
 
-    <div class="upload-form">
-      <input type="text" id="author-input" placeholder="Твой ник / имя автора *" maxlength="60">
-      <input type="text" id="contact-input" placeholder="Твой Telegram или ВКонтакте (для связи) *" maxlength="100">
-      <input type="text" id="chars-input" placeholder="Какие персонажи на арте? (напр. Ананас, Крикс, мой OC)" maxlength="200">
-      <textarea id="desc-input" placeholder="Описание арта (не обязательно)..." maxlength="300"></textarea>
-      <div class="admin-note">
-        <span>🔒</span>
-        <span>Контакт и информация о персонажах видны <strong>только администрации сайта</strong> — для связи с победителями. В публичной галерее они не отображаются.</span>
-      </div>
-      <button class="btn-submit" id="submit-btn">✦ Отправить работу</button>
+    <div class="form-fields">
+      <input class="field" type="text" id="author-input" placeholder="Твой ник / имя автора *" maxlength="60">
+      <input class="field" type="text" id="contact-input" placeholder="Контакт для связи: почта, номер телефона или @username в Telegram *" maxlength="120">
+      <input class="field" type="text" id="chars-input" placeholder="Какие персонажи на арте? (напр. Ананас, Крикс, мой OC)" maxlength="200">
+      <textarea class="field" id="desc-input" placeholder="Описание арта — не обязательно..." maxlength="300"></textarea>
+      <div class="privacy-note">Контакт и информация о персонажах видны <strong>только администрации</strong> — для связи с победителями. В публичной галерее они не отображаются.</div>
+      <button class="btn" id="submit-btn">Отправить работу</button>
     </div>
   </section>
 
-  <!-- ─── ГАЛЕРЕЯ ─── -->
-  <section id="gallery-section">
-    <div class="section-label">Работы участников</div>
-    <h2><span class="hl">Галерея</span> фан-артов</h2>
+  <!-- ГАЛЕРЕЯ -->
+  <section id="gallery-section" class="reveal">
+    <div class="label">Работы участников</div>
+    <h2><em>Галерея</em> фан-артов</h2>
     <p>Все присланные работы. Победители будут отмечены командой «Забудь Всё».</p>
     <div id="gallery">
-      <div class="empty-gallery">
-        <div class="empty-icon">🌌</div>
-        <p>Пока нет работ. Стань первым!</p>
+      <div class="empty-state">
+        <div class="empty-line"></div>
+        <p>Пока нет работ — стань первым</p>
+        <div class="empty-line"></div>
       </div>
     </div>
   </section>
@@ -887,272 +630,222 @@
 
 <footer>
   <div class="ft-logo">ЗАБУДЬ ВСЁ</div>
-  <p>Официальный сайт команды: Скотч, Ананас, Крикс, Стик, Лебби, Артинс, Блэк и приятели</p>
-  <p style="margin-top:7px;font-size:.76rem;">Конкурс фан-артов · Победитель получит пасхалку в 3-й серии · Сайт сделан Артинсом</p>
+  <p>Официальный сайт · Скотч, Ананас, Крикс, Стик, Лебби, Артинс, Блэк и приятели</p>
+  <p>Конкурс фан-артов · Победитель получит пасхалку в 3-й серии · Сайт — Артинс</p>
 </footer>
 
-<!-- LIGHTBOX -->
-<div id="lightbox">
-  <button id="lb-close">✕</button>
-  <img id="lb-img" src="" alt="">
-</div>
+<div id="lightbox"><button id="lb-close">✕</button><img id="lb-img" src="" alt=""></div>
+<div id="admin-btn" title="Администратор">◈</div>
 
-<!-- ADMIN TRIGGER -->
-<div id="admin-trigger" title="Панель администратора">⚙️</div>
-
-<!-- ADMIN MODAL -->
 <div id="admin-modal">
   <div class="admin-box">
     <button class="admin-close" id="admin-close-btn">✕</button>
-    <div class="admin-title">⚙️ Панель <span>администратора</span></div>
-    <div id="admin-login-wrap">
+    <div class="admin-head">Панель <span>администратора</span></div>
+    <div id="admin-login">
       <p>Введи пароль для доступа к данным участников</p>
-      <input class="admin-input" type="password" id="admin-pass-input" placeholder="Пароль...">
-      <button class="btn-submit" id="admin-login-btn" style="margin:0 auto;">Войти</button>
-      <p id="admin-err" style="color:#ff6060;margin-top:12px;font-size:.82rem;display:none;">Неверный пароль</p>
+      <input class="field" type="password" id="admin-pass" placeholder="Пароль..." style="max-width:320px;margin-bottom:12px;">
+      <br><button class="btn" id="admin-login-btn">Войти</button>
+      <p id="admin-err" style="color:var(--red);margin-top:12px;font-size:.8rem;display:none;">Неверный пароль</p>
     </div>
     <div id="admin-content" style="display:none;">
-      <p style="color:var(--muted);font-size:.85rem;margin-bottom:16px;">Список всех участников с контактными данными. Расставляй места кнопками — галерея обновится автоматически.</p>
-      <div class="admin-entries" id="admin-entries-list"></div>
+      <p style="color:var(--muted);font-size:.83rem;margin-bottom:4px;">Все участники с контактами. Расставляй места — галерея обновится автоматически.</p>
+      <div class="admin-entries" id="admin-list"></div>
     </div>
   </div>
 </div>
 
-<!-- NOTIF -->
 <div id="notif"></div>
 
 <script>
-  // ─── STARS ───
-  const starsEl = document.getElementById('stars');
-  for(let i=0;i<130;i++){
-    const s=document.createElement('div');
-    s.className='star';
-    const sz=Math.random()*2.5+0.5;
-    s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${Math.random()*4+2}s;--delay:-${Math.random()*6}s;--op:${Math.random()*.6+.2};`;
-    starsEl.appendChild(s);
-  }
-
-  // ─── STORAGE ───
-  const KEY = 'zabud_vse_v3';
-  // Admin password — change this to whatever you want!
-  const ADMIN_PASS = 'zabud_admin_2024';
-
-  function loadArts(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch{ return []; } }
-  function saveArts(a){ localStorage.setItem(KEY, JSON.stringify(a)); }
-
-  // ─── GALLERY ───
-  const gallery = document.getElementById('gallery');
-
-  function renderGallery(){
-    const arts = loadArts();
-    if(!arts.length){
-      gallery.innerHTML=`<div class="empty-gallery"><div class="empty-icon">🌌</div><p>Пока нет работ. Стань первым!</p></div>`;
-      return;
-    }
-    gallery.innerHTML='';
-    arts.forEach((art,i)=>{
-      const item=document.createElement('div');
-      item.className='gallery-item';
-      let badge='';
-      if(art.place===1) badge='<span class="gallery-place place-1">🥇 1 место</span>';
-      else if(art.place===2) badge='<span class="gallery-place place-2">🥈 2 место</span>';
-      else if(art.place===3) badge='<span class="gallery-place place-3">🥉 3 место</span>';
-      item.innerHTML=`${badge}<img src="${art.dataUrl}" alt="${esc(art.author)}" loading="lazy"><div class="gallery-meta"><div class="gallery-author">✦ ${esc(art.author)}</div>${art.desc?`<div class="gallery-desc">${esc(art.desc)}</div>`:''}</div>`;
-      item.addEventListener('click',()=>openLightbox(art.dataUrl));
-      gallery.appendChild(item);
+// ── CANVAS PARTICLES ──
+(function(){
+  const cv=document.getElementById('canvas-bg');
+  const ctx=cv.getContext('2d');
+  let W,H,pts=[];
+  function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+  const colors=['rgba(124,77,255,','rgba(224,64,251,','rgba(0,229,255,'];
+  for(let i=0;i<55;i++){
+    pts.push({
+      x:Math.random()*innerWidth, y:Math.random()*innerHeight,
+      vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25,
+      r:Math.random()*1.8+.4,
+      c:colors[Math.floor(Math.random()*3)],
+      o:Math.random()*.5+.1
     });
   }
-
-  function esc(s){
-    const d=document.createElement('div');
-    d.textContent=s;
-    return d.innerHTML;
-  }
-
-  // ─── FILE INPUT ───
-  const fileInput=document.getElementById('file-input');
-  const previewWrap=document.getElementById('preview-wrap');
-  const previewImg=document.getElementById('preview-img');
-  const dropZone=document.getElementById('drop-zone');
-  let currentDataUrl=null;
-
-  fileInput.addEventListener('change',e=>{ if(e.target.files[0]) handleFile(e.target.files[0]); });
-  dropZone.addEventListener('dragover',e=>{ e.preventDefault(); dropZone.classList.add('drag-over'); });
-  dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('drag-over'));
-  dropZone.addEventListener('drop',e=>{
-    e.preventDefault(); dropZone.classList.remove('drag-over');
-    const f=e.dataTransfer.files[0];
-    if(f&&f.type.startsWith('image/')) handleFile(f);
-  });
-  function handleFile(f){
-    const r=new FileReader();
-    r.onload=e=>{ currentDataUrl=e.target.result; previewImg.src=currentDataUrl; previewWrap.style.display='block'; };
-    r.readAsDataURL(f);
-  }
-
-  // ─── SUBMIT ───
-  document.getElementById('submit-btn').addEventListener('click',()=>{
-    const author=document.getElementById('author-input').value.trim();
-    const contact=document.getElementById('contact-input').value.trim();
-    const chars=document.getElementById('chars-input').value.trim();
-    const desc=document.getElementById('desc-input').value.trim();
-    if(!currentDataUrl){ showNotif('⚠️ Выбери изображение!'); return; }
-    if(!author){ showNotif('⚠️ Введи имя автора!'); return; }
-    if(!contact){ showNotif('⚠️ Введи контакт для связи!'); return; }
-    const arts=loadArts();
-    arts.unshift({ id:Date.now(), author, contact, chars, desc, dataUrl:currentDataUrl, place:0, timestamp:new Date().toISOString() });
-    saveArts(arts);
-    renderGallery();
-    currentDataUrl=null; previewWrap.style.display='none'; previewImg.src='';
-    document.getElementById('author-input').value='';
-    document.getElementById('contact-input').value='';
-    document.getElementById('chars-input').value='';
-    document.getElementById('desc-input').value='';
-    fileInput.value='';
-    showNotif('✦ Арт добавлен в галерею!');
-    document.getElementById('gallery-section').scrollIntoView({behavior:'smooth'});
-  });
-
-  // ─── LIGHTBOX ───
-  const lightbox=document.getElementById('lightbox');
-  const lbImg=document.getElementById('lb-img');
-  document.getElementById('lb-close').addEventListener('click',()=>lightbox.classList.remove('open'));
-  lightbox.addEventListener('click',e=>{ if(e.target===lightbox) lightbox.classList.remove('open'); });
-  document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ lightbox.classList.remove('open'); document.getElementById('admin-modal').classList.remove('open'); } });
-  function openLightbox(src){ lbImg.src=src; lightbox.classList.add('open'); }
-
-  // ─── NOTIF ───
-  const notif=document.getElementById('notif');
-  let ntimer;
-  function showNotif(msg){ notif.textContent=msg; notif.classList.add('show'); clearTimeout(ntimer); ntimer=setTimeout(()=>notif.classList.remove('show'),3200); }
-
-  // ─── ADMIN PANEL ───
-  const adminModal=document.getElementById('admin-modal');
-  let adminAuthed=false;
-
-  document.getElementById('admin-trigger').addEventListener('click',()=>{ adminModal.classList.add('open'); });
-  document.getElementById('admin-close-btn').addEventListener('click',()=>adminModal.classList.remove('open'));
-  adminModal.addEventListener('click',e=>{ if(e.target===adminModal) adminModal.classList.remove('open'); });
-
-  const adminPassInput=document.getElementById('admin-pass-input');
-  adminPassInput.addEventListener('keydown',e=>{ if(e.key==='Enter') tryAdminLogin(); });
-  document.getElementById('admin-login-btn').addEventListener('click', tryAdminLogin);
-
-  function tryAdminLogin(){
-    const val=adminPassInput.value;
-    if(val===ADMIN_PASS){
-      adminAuthed=true;
-      document.getElementById('admin-login-wrap').style.display='none';
-      document.getElementById('admin-content').style.display='block';
-      renderAdminList();
-    } else {
-      document.getElementById('admin-err').style.display='block';
-      adminPassInput.value='';
-      adminPassInput.classList.add('shake');
-      setTimeout(()=>adminPassInput.classList.remove('shake'),400);
-    }
-  }
-
-  function renderAdminList(){
-    const arts=loadArts();
-    const list=document.getElementById('admin-entries-list');
-    if(!arts.length){
-      list.innerHTML='<p style="color:var(--muted);text-align:center;padding:30px">Нет работ пока.</p>';
-      return;
-    }
-    list.innerHTML='';
-    arts.forEach(art=>{
-      const d=document.createElement('div');
-      d.className='admin-entry';
-      const dt=new Date(art.timestamp);
-      const dateStr=dt.toLocaleString('ru-RU');
-      d.innerHTML=`
-        <img src="${art.dataUrl}" alt="">
-        <div class="admin-entry-info">
-          <div class="admin-entry-name">✦ ${esc(art.author)}</div>
-          <div class="admin-entry-contact">📱 ${esc(art.contact)}</div>
-          ${art.chars?`<div class="admin-entry-char">🎭 ${esc(art.chars)}</div>`:''}
-          ${art.desc?`<div class="admin-entry-desc">"${esc(art.desc)}"</div>`:''}
-          <div class="admin-entry-time">🕐 ${dateStr}</div>
-          <div class="place-buttons">
-            <button class="place-btn pb-1" data-id="${art.id}" data-place="1">🥇 1 место</button>
-            <button class="place-btn pb-2" data-id="${art.id}" data-place="2">🥈 2 место</button>
-            <button class="place-btn pb-3" data-id="${art.id}" data-place="3">🥉 3 место</button>
-            <button class="place-btn pb-0" data-id="${art.id}" data-place="0">Убрать место</button>
-            <button class="delete-btn" data-id="${art.id}">🗑 Удалить</button>
-          </div>
-          ${art.place>0?`<div style="margin-top:6px;font-size:.75rem;color:var(--accent4);">Текущее место: ${art.place}</div>`:''}
-        </div>
-      `;
-      list.appendChild(d);
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach(p=>{
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.c+p.o+')';
+      ctx.fill();
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=W; if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H; if(p.y>H)p.y=0;
     });
-
-    list.querySelectorAll('.place-btn').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        const id=Number(btn.dataset.id);
-        const place=Number(btn.dataset.place);
-        const arts2=loadArts();
-        // if assigning place 1/2/3 — remove it from others first
-        if(place>0){
-          arts2.forEach(a=>{ if(a.place===place) a.place=0; });
+    // lines between close particles
+    for(let i=0;i<pts.length;i++){
+      for(let j=i+1;j<pts.length;j++){
+        const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y;
+        const d=Math.sqrt(dx*dx+dy*dy);
+        if(d<120){
+          ctx.beginPath();
+          ctx.moveTo(pts[i].x,pts[i].y);
+          ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.strokeStyle='rgba(124,77,255,'+((.12*(1-d/120)))+')';
+          ctx.lineWidth=.5;
+          ctx.stroke();
         }
-        const target=arts2.find(a=>a.id===id);
-        if(target) target.place=place;
-        saveArts(arts2);
-        renderGallery();
-        renderAdminList();
-        showNotif(place>0?`✦ Место ${place} присвоено!`:'✦ Место убрано');
-      });
-    });
-
-    list.querySelectorAll('.delete-btn').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        if(!confirm('Удалить эту работу?')) return;
-        const id=Number(btn.dataset.id);
-        const arts2=loadArts().filter(a=>a.id!==id);
-        saveArts(arts2);
-        renderGallery();
-        renderAdminList();
-        showNotif('🗑 Работа удалена');
-      });
-    });
-  }
-
-  // ─── SCROLL REVEAL ───
-  const observer=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.style.opacity='1';
-        e.target.style.transform='translateY(0)';
-        observer.unobserve(e.target);
       }
-    });
-  },{threshold:.08});
-  document.querySelectorAll('section').forEach(s=>{
-    s.style.opacity='0';
-    s.style.transform='translateY(22px)';
-    s.style.transition='opacity .7s ease, transform .7s ease';
-    observer.observe(s);
-  });
-
-  // ─── BANNER SCROLL HIDE/SHOW ───
-  const banner = document.getElementById('top-banner');
-  let lastScroll = 0;
-  let bannerVisible = true;
-  window.addEventListener('scroll', () => {
-    const cur = window.scrollY;
-    if (cur > lastScroll && cur > 120) {
-      // листаем вниз — прячем
-      if (bannerVisible) { banner.classList.add('hidden'); bannerVisible = false; }
-    } else {
-      // листаем вверх — показываем
-      if (!bannerVisible) { banner.classList.remove('hidden'); bannerVisible = true; }
     }
-    lastScroll = cur <= 0 ? 0 : cur;
-  }, { passive: true });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
 
-  // ─── INIT ───
-  renderGallery();
+// ── BANNER SCROLL ──
+const banner=document.getElementById('top-banner');
+let lastY=0, visible=true;
+window.addEventListener('scroll',()=>{
+  const y=scrollY;
+  if(y>lastY&&y>130){if(visible){banner.classList.add('hidden');visible=false;}}
+  else{if(!visible){banner.classList.remove('hidden');visible=true;}}
+  lastY=y<=0?0:y;
+},{passive:true});
+
+// ── SCROLL REVEAL ──
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.07});
+document.querySelectorAll('.reveal').forEach(el=>{io.observe(el);});
+
+// ── STORAGE ──
+const KEY='zv_arts_v4';
+const PASS='zabud_admin_2024';
+const load=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]');}catch{return[];}};
+const save=a=>localStorage.setItem(KEY,JSON.stringify(a));
+
+// ── GALLERY ──
+const gal=document.getElementById('gallery');
+function renderGallery(){
+  const arts=load();
+  if(!arts.length){
+    gal.innerHTML='<div class="empty-state"><div class="empty-line"></div><p>Пока нет работ — стань первым</p><div class="empty-line"></div></div>';
+    return;
+  }
+  gal.innerHTML='';
+  arts.forEach(a=>{
+    const d=document.createElement('div');
+    d.className='g-item';
+    let b='';
+    if(a.place===1)b='<span class="g-badge b1">1 место</span>';
+    else if(a.place===2)b='<span class="g-badge b2">2 место</span>';
+    else if(a.place===3)b='<span class="g-badge b3">3 место</span>';
+    d.innerHTML=`${b}<img class="g-img" src="${a.dataUrl}" alt="${x(a.author)}" loading="lazy"><div class="g-meta"><div class="g-author">${x(a.author)}</div>${a.desc?`<div class="g-desc">${x(a.desc)}</div>`:''}</div>`;
+    d.addEventListener('click',()=>lb(a.dataUrl));
+    gal.appendChild(d);
+  });
+}
+const x=s=>{const d=document.createElement('div');d.textContent=s;return d.innerHTML;};
+
+// ── FILE ──
+const fi=document.getElementById('file-input'),pw=document.getElementById('preview-wrap'),pi=document.getElementById('preview-img'),dz=document.getElementById('drop-zone');
+let cur=null;
+fi.addEventListener('change',e=>{if(e.target.files[0])hf(e.target.files[0]);});
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('over');});
+dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');const f=e.dataTransfer.files[0];if(f&&f.type.startsWith('image/'))hf(f);});
+function hf(f){const r=new FileReader();r.onload=e=>{cur=e.target.result;pi.src=cur;pw.style.display='block';};r.readAsDataURL(f);}
+
+// ── SUBMIT ──
+document.getElementById('submit-btn').addEventListener('click',()=>{
+  const au=document.getElementById('author-input').value.trim();
+  const co=document.getElementById('contact-input').value.trim();
+  const ch=document.getElementById('chars-input').value.trim();
+  const de=document.getElementById('desc-input').value.trim();
+  if(!cur){notif('Выбери изображение');return;}
+  if(!au){notif('Введи имя автора');return;}
+  if(!co){notif('Введи контакт для связи');return;}
+  const arts=load();
+  arts.unshift({id:Date.now(),author:au,contact:co,chars:ch,desc:de,dataUrl:cur,place:0,ts:new Date().toISOString()});
+  save(arts);renderGallery();
+  cur=null;pw.style.display='none';pi.src='';
+  ['author-input','contact-input','chars-input','desc-input'].forEach(id=>document.getElementById(id).value='');
+  fi.value='';
+  notif('Арт добавлен в галерею');
+  document.getElementById('gallery-section').scrollIntoView({behavior:'smooth'});
+});
+
+// ── LIGHTBOX ──
+const lbox=document.getElementById('lightbox'),lbi=document.getElementById('lb-img');
+function lb(src){lbi.src=src;lbox.classList.add('open');}
+document.getElementById('lb-close').addEventListener('click',()=>lbox.classList.remove('open'));
+lbox.addEventListener('click',e=>{if(e.target===lbox)lbox.classList.remove('open');});
+
+// ── ADMIN ──
+const am=document.getElementById('admin-modal');
+document.getElementById('admin-btn').addEventListener('click',()=>am.classList.add('open'));
+document.getElementById('admin-close-btn').addEventListener('click',()=>am.classList.remove('open'));
+am.addEventListener('click',e=>{if(e.target===am)am.classList.remove('open');});
+document.getElementById('admin-pass').addEventListener('keydown',e=>{if(e.key==='Enter')login();});
+document.getElementById('admin-login-btn').addEventListener('click',login);
+function login(){
+  if(document.getElementById('admin-pass').value===PASS){
+    document.getElementById('admin-login').style.display='none';
+    document.getElementById('admin-content').style.display='block';
+    renderAdmin();
+  }else{
+    document.getElementById('admin-err').style.display='block';
+    document.getElementById('admin-pass').value='';
+  }
+}
+function renderAdmin(){
+  const arts=load(),list=document.getElementById('admin-list');
+  if(!arts.length){list.innerHTML='<p style="color:var(--muted);padding:20px;text-align:center">Нет работ.</p>';return;}
+  list.innerHTML='';
+  arts.forEach(a=>{
+    const el=document.createElement('div');el.className='ae';
+    const dt=new Date(a.ts).toLocaleString('ru-RU');
+    el.innerHTML=`<img src="${a.dataUrl}" alt=""><div>
+      <div class="ae-name">${x(a.author)}</div>
+      <div class="ae-contact">${x(a.contact)}</div>
+      ${a.chars?`<div class="ae-chars">${x(a.chars)}</div>`:''}
+      ${a.desc?`<div class="ae-desc">"${x(a.desc)}"</div>`:''}
+      <div class="ae-time">${dt}</div>
+      <div class="ae-actions">
+        <button class="ap ap1" data-id="${a.id}" data-p="1">1 место</button>
+        <button class="ap ap2" data-id="${a.id}" data-p="2">2 место</button>
+        <button class="ap ap3" data-id="${a.id}" data-p="3">3 место</button>
+        <button class="ap ap0" data-id="${a.id}" data-p="0">Убрать</button>
+        <button class="ap-del" data-id="${a.id}">Удалить</button>
+      </div>
+      ${a.place>0?`<div class="ae-place">Текущее место: ${a.place}</div>`:''}
+    </div>`;
+    list.appendChild(el);
+  });
+  list.querySelectorAll('.ap').forEach(b=>b.addEventListener('click',()=>{
+    const id=Number(b.dataset.id),p=Number(b.dataset.p),arts2=load();
+    if(p>0)arts2.forEach(a=>{if(a.place===p)a.place=0;});
+    const t=arts2.find(a=>a.id===id);if(t)t.place=p;
+    save(arts2);renderGallery();renderAdmin();
+    notif(p>0?`Место ${p} присвоено`:'Место убрано');
+  }));
+  list.querySelectorAll('.ap-del').forEach(b=>b.addEventListener('click',()=>{
+    if(!confirm('Удалить работу?'))return;
+    const id=Number(b.dataset.id);
+    save(load().filter(a=>a.id!==id));renderGallery();renderAdmin();notif('Работа удалена');
+  }));
+}
+
+// ── NOTIF ──
+const nf=document.getElementById('notif');let nt;
+function notif(msg){nf.textContent=msg;nf.classList.add('show');clearTimeout(nt);nt=setTimeout(()=>nf.classList.remove('show'),3200);}
+
+// ── ESC ──
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){lbox.classList.remove('open');am.classList.remove('open');}});
+
+renderGallery();
 </script>
 </body>
 </html>

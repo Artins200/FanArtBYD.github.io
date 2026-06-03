@@ -5,623 +5,990 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ЗАБУДЬ ВСЁ — Официальный сайт | Фан-арты, конкурс, 3 серия</title>
 <meta name="description" content="Официальный сайт анимационного сериала «Забудь Всё». Конкурс фан-артов — победитель попадёт в 3 серию. Загружай арт, смотри работы фанатов, узнай лор вселенной.">
-<meta name="keywords" content="забудь всё, забыть всё, ЗАБУДЬ ВСЁ, ЗаБуДь ВсЁ, забудь все, забыть все, забудь всё сериал, забудь всё анимация, забудь всё фан-арты, фан-арты забудь всё, fanart забудь всё, забудь всё конкурс, 3 серия забудь всё, третья серия забудь всё, пасхалка 3 серия, забудь всё официальный сайт, аниматоры забудь всё, Ананас аниматор, Скотч сценарист, Крикс, Стик, Лебби, Артинс, Блэк, синяя изолента, синяя изолента злодей, забудь всё лор, сайт забудь всё, конкурс рисунков, авторский мультсериал, независимая анимация, забудь всё персонажи, забудь всё мультик, zabudvse, zabudvsyo, забудьвсё">
+<meta name="keywords" content="забудь всё, забыть всё, ЗАБУДЬ ВСЁ, ЗаБуДь ВсЁ, забудь все, забудь всё сериал, забудь всё анимация, забудь всё фан-арты, fanart забудь всё, забудь всё конкурс, 3 серия забудь всё, пасхалка 3 серия, забудь всё официальный сайт, аниматоры забудь всё, Ананас, Скотч, Крикс, Стик, Лебби, Артинс, Блэк, синяя изолента, синяя изолента злодей, забудь всё лор, zabudvse, zabudvsyo, забудьвсё">
 <meta name="author" content="Команда аниматоров Забудь Всё — Артинс">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#7b4fff">
+<meta name="theme-color" content="#0f0c1a">
 <meta property="og:title" content="ЗАБУДЬ ВСЁ — Официальный сайт | Конкурс фан-артов">
 <meta property="og:description" content="Конкурс фан-артов от команды «Забудь Всё». Победитель получит пасхалку в 3 серии.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="photo_2026-06-03_01-41-54.jpg">
+<meta property="og:image" content="banner.jpg">
 <meta property="og:locale" content="ru_RU">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
+/* ════════════════════════════════════════════
+   RESET & ROOT
+════════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
 :root {
-  --bg:      #06040f;
-  --surface: #0d0a1e;
-  --card:    #110e22;
-  --card2:   #16132c;
-  --border:  #221e3a;
-  --border2: #2e2850;
-  --accent:  #7c4dff;
-  --accent2: #e040fb;
-  --accent3: #00e5ff;
-  --gold:    #ffd740;
-  --text:    #ede8ff;
-  --sub:     #9b94c4;
-  --muted:   #5c5680;
-  --red:     #ff4444;
-  --g1: rgba(124,77,255,.3);
-  --g2: rgba(224,64,251,.2);
-  --g3: rgba(0,229,255,.15);
+  --ink:    #0b0914;
+  --ink2:   #100d1f;
+  --ink3:   #171328;
+  --ink4:   #1f1b33;
+  --paper:  #eeeaff;
+  --muted:  #7a728f;
+  --dim:    #3d3757;
+  --line:   #2a2440;
+
+  --v:  #9b5de5;
+  --vl: #c77dff;
+  --vm: #6a0dad;
+  --pk: #f72585;
+  --cy: #4cc9f0;
+  --gd: #ffd166;
+  --gr: #06d6a0;
+
+  --gv: linear-gradient(135deg, #9b5de5, #f72585);
+  --gc: linear-gradient(135deg, #4cc9f0, #9b5de5);
+  --gg: linear-gradient(135deg, #ffd166, #f72585);
+
+  --shadow: 0 0 0 1px var(--line);
+  --r: 16px;
+  --r2: 24px;
+  --r3: 32px;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-
-/* ── PARTICLES ── */
-#canvas-bg{position:fixed;inset:0;z-index:0;pointer-events:none;}
-
-/* ── GRAIN ── */
-body::after{
-  content:'';position:fixed;inset:0;z-index:1;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.035'/%3E%3C/svg%3E");
-  opacity:.4;
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Syne', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  cursor: default;
 }
 
-/* ── BANNER ── */
-#top-banner{
-  position:fixed;top:0;left:0;right:0;height:300px;z-index:1;
-  pointer-events:none;overflow:hidden;
-  transform:translateY(0);opacity:1;
-  transition:transform .6s cubic-bezier(.4,0,.2,1),opacity .6s ease;
-  will-change:transform,opacity;
-}
-#top-banner.hidden{transform:translateY(-100%);opacity:0;}
-#top-banner img{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:brightness(.6) saturate(1.15);}
-#top-banner::after{content:'';position:absolute;bottom:0;left:0;right:0;height:75%;background:linear-gradient(transparent,var(--bg));}
-#top-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,4,15,.4) 0%,transparent 55%);}
+/* ════════════════════════════════════════════
+   CUSTOM CURSOR
+════════════════════════════════════════════ */
+#cur { position: fixed; width: 20px; height: 20px; border: 2px solid var(--v); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: transform .12s ease, background .15s ease, width .2s ease, height .2s ease, border-color .2s ease; mix-blend-mode: difference; }
+#cur2 { position: fixed; width: 6px; height: 6px; background: var(--vl); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: left .06s ease, top .06s ease; }
+body:hover #cur { opacity: 1; }
 
-/* ── HERO ── */
-#hero{
-  position:relative;z-index:2;
-  padding:190px 24px 50px;
-  display:flex;flex-direction:column;align-items:center;
+/* ════════════════════════════════════════════
+   NOISE TEXTURE
+════════════════════════════════════════════ */
+#noise {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: .4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23f)' opacity='.05'/%3E%3C/svg%3E");
 }
 
-.logo-wrap{text-align:center;animation:riseIn 1s cubic-bezier(.16,1,.3,1) both;}
-@keyframes riseIn{from{opacity:0;transform:translateY(36px) scale(.97);}to{opacity:1;transform:none;}}
+/* ════════════════════════════════════════════
+   ORBS
+════════════════════════════════════════════ */
+.orb {
+  position: fixed; border-radius: 50%; pointer-events: none; z-index: 0;
+  filter: blur(100px); animation: drift var(--d, 12s) ease-in-out infinite alternate;
+}
+@keyframes drift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(var(--tx, 40px), var(--ty, 30px)) scale(1.08); }
+}
+.o1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(155,93,229,.18), transparent 65%); top: -10%; left: -15%; --d: 14s; --tx: 60px; --ty: 40px; }
+.o2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(247,37,133,.14), transparent 65%); top: 40%; right: -10%; --d: 18s; --tx: -40px; --ty: 60px; }
+.o3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(76,201,240,.12), transparent 65%); bottom: 10%; left: 20%; --d: 10s; --tx: 50px; --ty: -30px; }
+.o4 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,209,102,.1),  transparent 65%); top: 60%; left: 5%;  --d: 16s; --tx: 30px; --ty: 50px; }
 
-.logo-eyebrow{
-  font-size:.7rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;
-  color:var(--accent3);margin-bottom:18px;
-  display:inline-flex;align-items:center;gap:10px;
-  animation:riseIn 1s .1s cubic-bezier(.16,1,.3,1) both;
+/* ════════════════════════════════════════════
+   BANNER
+════════════════════════════════════════════ */
+#banner {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 320px; z-index: 2; overflow: hidden;
+  pointer-events: none;
+  transform: translateY(0); opacity: 1;
+  transition: transform .65s cubic-bezier(.77, 0, .18, 1), opacity .65s ease;
+  will-change: transform, opacity;
 }
-.logo-eyebrow::before,.logo-eyebrow::after{content:'';width:30px;height:1px;background:var(--accent3);opacity:.5;}
-
-.logo-main{
-  font-family:'Unbounded',sans-serif;
-  font-size:clamp(3rem,10vw,7.5rem);
-  font-weight:900;line-height:.95;letter-spacing:-.03em;
-  background:linear-gradient(135deg,#a78bff 0%,#e040fb 45%,#ffd740 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  position:relative;
-  filter:drop-shadow(0 0 40px rgba(124,77,255,.5));
-  animation:logoShine 6s ease-in-out infinite alternate, riseIn 1s .2s cubic-bezier(.16,1,.3,1) both;
+#banner.hide { transform: translateY(-100%); opacity: 0; }
+#banner img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 30%;
+  filter: brightness(.6) saturate(1.2);
+  display: block;
 }
-@keyframes logoShine{
-  from{filter:drop-shadow(0 0 25px rgba(124,77,255,.6));}
-  to{filter:drop-shadow(0 0 70px rgba(224,64,251,.8)) drop-shadow(0 0 120px rgba(124,77,255,.4));}
+#banner::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 80%;
+  background: linear-gradient(to bottom, transparent, var(--ink));
 }
-
-.logo-sub{
-  font-size:clamp(.8rem,2vw,1rem);color:var(--sub);
-  margin-top:16px;letter-spacing:.12em;text-transform:uppercase;font-weight:300;
-  animation:riseIn 1s .35s cubic-bezier(.16,1,.3,1) both;
+#banner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(11,9,20,.5) 0%, transparent 50%);
 }
-
-/* ── NAV ── */
-nav{
-  position:relative;z-index:10;
-  width:100%;max-width:860px;margin:36px auto 0;padding:0 20px;
-  animation:riseIn 1s .5s cubic-bezier(.16,1,.3,1) both;
-}
-.nav-pill{
-  display:flex;gap:2px;
-  background:rgba(255,255,255,.03);
-  border:1px solid var(--border);
-  border-radius:18px;padding:5px;
-  backdrop-filter:blur(30px);
-  -webkit-backdrop-filter:blur(30px);
-  flex-wrap:wrap;justify-content:center;
-}
-nav a{
-  color:var(--muted);text-decoration:none;
-  font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-  padding:10px 18px;border-radius:13px;
-  transition:color .2s,background .2s,box-shadow .2s;
-}
-nav a:hover{color:var(--text);background:rgba(124,77,255,.18);box-shadow:0 0 24px var(--g1);}
-
-/* ── MAIN ── */
-main{position:relative;z-index:2;max-width:1020px;margin:0 auto;padding:70px 24px 120px;}
-section{margin-bottom:100px;}
-
-/* ── SECTION HEADER ── */
-.label{
-  font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:12px;
-  display:flex;align-items:center;gap:12px;
-}
-.label::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(124,77,255,.5),transparent);}
-
-h2{
-  font-family:'Unbounded',sans-serif;
-  font-size:clamp(1.6rem,4.5vw,2.6rem);
-  font-weight:900;line-height:1.1;margin-bottom:20px;
-  letter-spacing:-.02em;
-}
-h2 em{
-  font-style:normal;
-  background:linear-gradient(90deg,var(--accent2),var(--gold));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+/* Scanline on banner */
+#banner .scan {
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,.06) 3px, rgba(0,0,0,.06) 4px);
+  pointer-events: none;
 }
 
-p{line-height:1.85;color:var(--sub);font-size:.98rem;font-weight:400;}
-p+p{margin-top:12px;}
-strong{color:var(--text);font-weight:600;}
+/* ════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════ */
+#hero {
+  position: relative; z-index: 3;
+  padding-top: 220px;
+  display: flex; flex-direction: column; align-items: center;
+  padding-bottom: 60px;
+}
 
-/* ── LORE GRID ── */
-.grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;margin-top:32px;border-radius:20px;overflow:hidden;border:1px solid var(--border);}
-.lore-cell{
-  background:var(--card);padding:28px 26px;
-  transition:background .3s;position:relative;overflow:hidden;
+.hero-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: .65rem; letter-spacing: .35em; text-transform: uppercase;
+  color: var(--cy); margin-bottom: 24px;
+  display: flex; align-items: center; gap: 14px;
+  animation: popIn .8s .1s cubic-bezier(.34, 1.56, .64, 1) both;
 }
-.lore-cell::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--lc,linear-gradient(90deg,var(--accent),var(--accent2)));opacity:0;transition:opacity .3s;}
-.lore-cell:hover{background:var(--card2);}
-.lore-cell:hover::after{opacity:1;}
-.cell-num{font-family:'Unbounded',sans-serif;font-size:.65rem;font-weight:700;color:var(--muted);letter-spacing:.2em;margin-bottom:14px;}
-.cell-title{font-family:'Unbounded',sans-serif;font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:10px;}
-.cell-body{font-size:.85rem;color:var(--sub);line-height:1.7;}
+.hero-eyebrow span { display: inline-block; width: 40px; height: 1px; background: var(--cy); opacity: .5; }
 
-/* ── VILLAIN ── */
-.villain-wrap{
-  margin-top:32px;
-  border:1px solid rgba(255,68,68,.25);
-  border-radius:20px;overflow:hidden;
-  background:linear-gradient(135deg,rgba(255,40,40,.07),rgba(124,77,255,.05));
-  position:relative;
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(30px) scale(.95); }
+  to   { opacity: 1; transform: none; }
 }
-.villain-wrap::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,var(--red),var(--accent),transparent);
-}
-.villain-inner{padding:36px 38px;}
-.villain-tag{font-size:.65rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--red);margin-bottom:14px;}
-.villain-title{font-family:'Unbounded',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem);font-weight:900;color:var(--text);margin-bottom:16px;line-height:1.2;}
-.villain-title span{color:var(--red);}
-.villain-body{font-size:.95rem;line-height:1.85;color:var(--sub);}
-.villain-body strong{color:#ff8080;}
 
-/* ── TEAM ── */
-.team-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;}
-.tc{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:12px;padding:14px 20px;
-  display:flex;align-items:center;gap:14px;
-  transition:border-color .25s,background .25s,transform .25s;
+.hero-title {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  line-height: .92;
+  letter-spacing: -.02em;
+  text-align: center;
+  position: relative;
+  animation: popIn .9s .2s cubic-bezier(.34, 1.56, .64, 1) both;
 }
-.tc:hover{border-color:var(--accent);background:rgba(124,77,255,.1);transform:translateY(-2px);}
-.tc-dot{
-  width:36px;height:36px;border-radius:50%;flex-shrink:0;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Unbounded',sans-serif;font-size:.7rem;font-weight:900;color:#fff;
+.hero-title .t1 {
+  background: var(--gv);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 40px rgba(155,93,229,.6));
+  animation: shimmer 8s linear infinite, popIn .9s .2s cubic-bezier(.34, 1.56, .64, 1) both;
+  background-size: 200%;
 }
-.tc-name{font-family:'Unbounded',sans-serif;font-size:.78rem;font-weight:700;color:var(--text);}
-.tc-role{font-size:.7rem;color:var(--muted);margin-top:2px;font-weight:400;}
+@keyframes shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+.hero-title .t1 { background: linear-gradient(90deg, #9b5de5, #f72585, #ffd166, #9b5de5); background-size: 300%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-/* ── CONTEST ── */
-.prize-wrap{
-  margin-top:32px;border:1px solid var(--border);border-radius:20px;overflow:hidden;
+.hero-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(.7rem, 1.8vw, .9rem);
+  color: var(--muted); margin-top: 20px;
+  letter-spacing: .15em; text-transform: uppercase;
+  animation: popIn .8s .4s cubic-bezier(.34, 1.56, .64, 1) both;
 }
-.prize-top{
-  padding:32px 36px 28px;
-  background:linear-gradient(135deg,rgba(124,77,255,.1),rgba(224,64,251,.06));
-  border-bottom:1px solid var(--border);
-  position:relative;
-}
-.prize-top::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--accent),var(--accent2),transparent);}
-.prize-row{
-  display:flex;align-items:flex-start;gap:16px;padding:22px 36px;
-  border-bottom:1px solid var(--border);
-  transition:background .25s;
-}
-.prize-row:last-child{border-bottom:none;}
-.prize-row:hover{background:rgba(255,255,255,.02);}
-.prize-num{
-  width:38px;height:38px;border-radius:50%;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Unbounded',sans-serif;font-size:.8rem;font-weight:900;
-}
-.p1{background:linear-gradient(135deg,#ffd740,#ff9100);color:#000;}
-.p2{background:linear-gradient(135deg,#cfd8dc,#90a4ae);color:#000;}
-.p3{background:linear-gradient(135deg,#a1887f,#6d4c41);color:#fff;}
-.prize-title{font-family:'Unbounded',sans-serif;font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:5px;}
-.prize-desc{font-size:.82rem;color:var(--sub);line-height:1.6;}
 
-/* ── RULES ── */
-.rules-list{list-style:none;display:flex;flex-direction:column;gap:1px;margin-top:32px;border:1px solid var(--border);border-radius:20px;overflow:hidden;}
-.rule-item{
-  background:var(--card);padding:18px 24px;
-  display:flex;align-items:flex-start;gap:18px;
-  transition:background .25s;
+.hero-badge {
+  margin-top: 26px;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(155, 93, 229, .12);
+  border: 1px solid rgba(155, 93, 229, .3);
+  border-radius: 100px; padding: 10px 24px;
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--vl);
+  animation: popIn .8s .55s cubic-bezier(.34, 1.56, .64, 1) both;
+  box-shadow: 0 0 30px rgba(155,93,229,.15), inset 0 1px 0 rgba(255,255,255,.05);
 }
-.rule-item:hover{background:var(--card2);}
-.rn{
-  font-family:'Unbounded',sans-serif;font-size:.65rem;font-weight:900;
-  color:var(--accent3);background:rgba(0,229,255,.08);
-  border-radius:7px;padding:5px 8px;flex-shrink:0;letter-spacing:.1em;
-  margin-top:2px;
+.hero-badge::before { content: '✦'; font-size: .8rem; }
+
+/* ════════════════════════════════════════════
+   NAV
+════════════════════════════════════════════ */
+#nav-wrap {
+  position: relative; z-index: 10;
+  width: 100%; max-width: 900px;
+  margin: 40px auto 0; padding: 0 20px;
+  animation: popIn .8s .7s cubic-bezier(.34, 1.56, .64, 1) both;
 }
-.rule-text{font-size:.9rem;color:var(--sub);line-height:1.7;}
-
-/* ── UPLOAD ── */
-.drop-zone{
-  border:1.5px dashed rgba(124,77,255,.35);
-  border-radius:18px;padding:50px 30px;text-align:center;
-  cursor:pointer;transition:all .3s;
-  background:rgba(124,77,255,.03);
-  position:relative;overflow:hidden;margin-top:32px;
+.nav-bar {
+  display: flex; gap: 4px; flex-wrap: wrap; justify-content: center;
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--line);
+  border-radius: 100px; padding: 6px;
+  backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
 }
-.drop-zone:hover,.drop-zone.over{border-color:var(--accent);background:rgba(124,77,255,.08);box-shadow:0 0 50px var(--g1);}
-.drop-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
-.dz-icon{
-  width:52px;height:52px;border-radius:14px;
-  background:linear-gradient(135deg,rgba(124,77,255,.2),rgba(224,64,251,.15));
-  border:1px solid rgba(124,77,255,.3);
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 16px;font-size:1.4rem;
+.nav-bar a {
+  color: var(--muted); text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: .65rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 11px 20px; border-radius: 100px;
+  transition: color .2s, background .2s, box-shadow .2s;
 }
-.dz-title{font-family:'Unbounded',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:6px;}
-.dz-sub{font-size:.82rem;color:var(--muted);}
-
-#preview-wrap{margin-top:16px;display:none;}
-#preview-img{max-height:210px;border-radius:14px;border:1px solid var(--border2);box-shadow:0 0 30px var(--g1);}
-
-.form-fields{margin-top:18px;display:flex;flex-direction:column;gap:10px;}
-.field{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:12px;padding:14px 18px;
-  color:var(--text);font-family:'Inter',sans-serif;font-size:.9rem;
-  outline:none;transition:border-color .25s,box-shadow .25s;width:100%;
+.nav-bar a:hover {
+  color: var(--paper);
+  background: rgba(155,93,229,.2);
+  box-shadow: 0 0 20px rgba(155,93,229,.25);
 }
-.field:focus{border-color:var(--accent);box-shadow:0 0 20px rgba(124,77,255,.2);}
-.field::placeholder{color:var(--muted);}
-textarea.field{resize:vertical;min-height:72px;}
 
-.privacy-note{
-  font-size:.78rem;color:var(--muted);
-  background:rgba(0,229,255,.04);
-  border:1px solid rgba(0,229,255,.12);
-  border-radius:10px;padding:12px 16px;
-  line-height:1.6;
+/* ════════════════════════════════════════════
+   MAIN / SECTIONS
+════════════════════════════════════════════ */
+main {
+  position: relative; z-index: 3;
+  max-width: 1060px; margin: 0 auto;
+  padding: 80px 24px 140px;
 }
-.privacy-note strong{color:var(--accent3);}
 
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#fff;font-family:'Unbounded',sans-serif;
-  font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  border:none;border-radius:12px;padding:15px 32px;
-  cursor:pointer;transition:transform .25s,box-shadow .25s;
-  box-shadow:0 4px 30px rgba(124,77,255,.35);align-self:flex-start;
+section { margin-bottom: 110px; }
+
+/* Reveal on scroll */
+.rv { opacity: 0; transform: translateY(28px); transition: opacity .75s ease, transform .75s ease; }
+.rv.on { opacity: 1; transform: none; }
+
+/* Section header */
+.sh {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 14px;
 }
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 50px rgba(124,77,255,.5),0 0 30px rgba(224,64,251,.3);}
-.btn:active{transform:none;}
-
-/* ── GALLERY ── */
-#gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(248px,1fr));
-  gap:14px;margin-top:32px;
+.sh-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: .6rem; font-weight: 700;
+  letter-spacing: .28em; text-transform: uppercase;
+  color: var(--v); white-space: nowrap;
 }
-.g-item{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:16px;overflow:hidden;cursor:pointer;position:relative;
-  transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s;
+.sh-line { flex: 1; height: 1px; background: linear-gradient(to right, rgba(155,93,229,.5), transparent); }
+
+h2 {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1.05; letter-spacing: -.02em;
+  margin-bottom: 22px; color: var(--paper);
 }
-.g-item:hover{transform:translateY(-5px) scale(1.01);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 40px var(--g1);border-color:rgba(124,77,255,.4);}
-.g-img{width:100%;height:195px;object-fit:cover;display:block;transition:transform .45s;}
-.g-item:hover .g-img{transform:scale(1.07);}
-.g-meta{padding:12px 14px;}
-.g-author{font-family:'Unbounded',sans-serif;font-size:.75rem;font-weight:700;color:var(--text);}
-.g-desc{font-size:.78rem;color:var(--muted);margin-top:3px;line-height:1.4;}
-.g-badge{
-  position:absolute;top:10px;right:10px;
-  font-family:'Unbounded',sans-serif;font-size:.65rem;font-weight:900;
-  padding:4px 11px;border-radius:100px;
+h2 .c { background: var(--gg); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+h2 .cv { background: var(--gv); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+.body-text { font-size: 1rem; line-height: 1.85; color: var(--muted); font-weight: 400; }
+.body-text + .body-text { margin-top: 12px; }
+.body-text strong { color: var(--paper); font-weight: 600; }
+
+/* ════════════════════════════════════════════
+   LORE GRID — bento style
+════════════════════════════════════════════ */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  gap: 10px; margin-top: 36px;
 }
-.b1{background:linear-gradient(135deg,#ffd740,#ff9100);color:#000;}
-.b2{background:linear-gradient(135deg,#cfd8dc,#90a4ae);color:#000;}
-.b3{background:linear-gradient(135deg,#a1887f,#6d4c41);color:#fff;}
-
-.empty-state{grid-column:1/-1;text-align:center;padding:70px 20px;}
-.empty-state p{font-size:.95rem;color:var(--muted);margin-top:14px;}
-.empty-line{width:60px;height:1px;background:var(--border2);margin:16px auto;}
-
-/* ── LIGHTBOX ── */
-#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:1000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(16px);}
-#lightbox.open{display:flex;animation:fadeIn .2s ease;}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-#lb-img{max-width:90vw;max-height:86vh;border-radius:14px;box-shadow:0 0 80px rgba(124,77,255,.4);}
-#lb-close{position:absolute;top:20px;right:26px;font-size:1.6rem;color:rgba(255,255,255,.5);cursor:pointer;background:none;border:none;transition:color .2s;font-weight:300;line-height:1;}
-#lb-close:hover{color:#fff;}
-
-/* ── ADMIN TRIGGER ── */
-#admin-btn{
-  position:fixed;bottom:24px;right:24px;
-  width:44px;height:44px;border-radius:12px;
-  background:rgba(255,255,255,.04);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;cursor:pointer;z-index:500;
-  backdrop-filter:blur(12px);transition:all .25s;
+.bn {
+  background: var(--ink3);
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  padding: 28px 26px;
+  position: relative; overflow: hidden;
+  transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s, border-color .3s;
 }
-#admin-btn:hover{background:rgba(124,77,255,.15);border-color:var(--accent);box-shadow:0 0 20px var(--g1);}
-
-/* ── ADMIN MODAL ── */
-#admin-modal{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(16px);padding:20px;}
-#admin-modal.open{display:flex;animation:fadeIn .25s ease;}
-.admin-box{
-  background:var(--card2);border:1px solid rgba(124,77,255,.3);
-  border-radius:22px;width:100%;max-width:840px;max-height:90vh;
-  overflow-y:auto;padding:36px;
-  box-shadow:0 0 80px rgba(124,77,255,.2);position:relative;
+.bn:hover { transform: translateY(-3px) scale(1.01); box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.bn::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--bc, var(--gv));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .35s ease;
 }
-.admin-box::-webkit-scrollbar{width:4px;}
-.admin-box::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px;}
-.admin-head{font-family:'Unbounded',sans-serif;font-size:1.1rem;font-weight:900;color:var(--text);margin-bottom:24px;}
-.admin-head span{color:var(--accent);}
-#admin-login p{color:var(--sub);font-size:.9rem;margin-bottom:16px;}
-.admin-close{position:absolute;top:18px;right:22px;background:none;border:none;color:rgba(255,255,255,.4);font-size:1.5rem;cursor:pointer;transition:color .2s;font-weight:300;line-height:1;}
-.admin-close:hover{color:#fff;}
-.admin-entries{display:flex;flex-direction:column;gap:12px;margin-top:18px;}
-.ae{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:16px 18px;
-  display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:start;
+.bn:hover::after { transform: scaleX(1); }
+.bn:nth-child(1) { grid-column: span 4; --bc: var(--gv); }
+.bn:nth-child(2) { grid-column: span 2; --bc: linear-gradient(90deg, var(--cy), var(--v)); }
+.bn:nth-child(3) { grid-column: span 2; --bc: linear-gradient(90deg, var(--gd), var(--pk)); }
+.bn:nth-child(4) { grid-column: span 2; --bc: linear-gradient(90deg, var(--gr), var(--cy)); }
+.bn:nth-child(5) { grid-column: span 3; --bc: var(--gc); }
+.bn:nth-child(6) { grid-column: span 3; --bc: var(--gg); }
+
+.bn-num {
+  font-family: 'Space Mono', monospace;
+  font-size: .58rem; color: var(--dim); letter-spacing: .2em;
+  margin-bottom: 16px; text-transform: uppercase;
 }
-.ae img{width:76px;height:76px;object-fit:cover;border-radius:10px;border:1px solid var(--border2);}
-.ae-name{font-family:'Unbounded',sans-serif;font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:4px;}
-.ae-contact{font-size:.8rem;color:var(--accent3);margin-bottom:3px;}
-.ae-chars{font-size:.78rem;color:#c0b8e8;}
-.ae-desc{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:2px;}
-.ae-time{font-size:.7rem;color:var(--muted);margin-top:4px;}
-.ae-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px;}
-.ap{font-family:'Unbounded',sans-serif;font-size:.62rem;font-weight:900;border:none;border-radius:7px;padding:6px 11px;cursor:pointer;transition:opacity .2s,transform .2s;opacity:.85;}
-.ap:hover{opacity:1;transform:translateY(-1px);}
-.ap1{background:linear-gradient(135deg,#ffd740,#ff9100);color:#000;}
-.ap2{background:linear-gradient(135deg,#cfd8dc,#90a4ae);color:#000;}
-.ap3{background:linear-gradient(135deg,#a1887f,#6d4c41);color:#fff;}
-.ap0{background:rgba(255,255,255,.07);color:var(--muted);}
-.ap-del{font-size:.72rem;font-weight:600;font-family:'Inter',sans-serif;background:rgba(255,68,68,.12);border:1px solid rgba(255,68,68,.25);color:#ff8080;border-radius:7px;padding:6px 11px;cursor:pointer;transition:background .2s;}
-.ap-del:hover{background:rgba(255,68,68,.25);}
-.ae-place{font-size:.72rem;color:var(--gold);margin-top:6px;font-weight:600;}
-
-/* ── FOOTER ── */
-footer{
-  position:relative;z-index:2;
-  border-top:1px solid var(--border);
-  padding:44px 24px 60px;
-  text-align:center;
+.bn-title {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1.05rem; color: var(--paper);
+  margin-bottom: 10px; line-height: 1.2;
 }
-.ft-logo{font-family:'Unbounded',sans-serif;font-size:1.1rem;font-weight:900;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;}
-footer p{font-size:.8rem;color:var(--muted);line-height:1.8;}
+.bn-body { font-size: .85rem; color: var(--muted); line-height: 1.7; }
+.bn-big { font-family: 'Dela Gothic One', sans-serif; font-size: 3rem; color: rgba(155,93,229,.15); position: absolute; bottom: 16px; right: 20px; line-height: 1; pointer-events: none; }
 
-/* ── NOTIF ── */
-#notif{
-  position:fixed;bottom:30px;left:50%;
-  transform:translateX(-50%) translateY(80px);
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  color:#fff;font-family:'Unbounded',sans-serif;font-size:.76rem;font-weight:700;
-  padding:13px 26px;border-radius:100px;
-  z-index:9999;transition:transform .4s cubic-bezier(.16,1,.3,1);
-  pointer-events:none;box-shadow:0 8px 40px rgba(124,77,255,.45);white-space:nowrap;
+@media (max-width: 700px) {
+  .bento { grid-template-columns: 1fr 1fr; }
+  .bn:nth-child(1) { grid-column: span 2; }
+  .bn:nth-child(2), .bn:nth-child(3), .bn:nth-child(4) { grid-column: span 1; }
+  .bn:nth-child(5), .bn:nth-child(6) { grid-column: span 2; }
 }
-#notif.show{transform:translateX(-50%) translateY(0);}
+@media (max-width: 480px) {
+  .bento { grid-template-columns: 1fr; }
+  .bn { grid-column: span 1 !important; }
+}
 
-/* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.in{opacity:1;transform:none;}
+/* ════════════════════════════════════════════
+   VILLAIN BLOCK
+════════════════════════════════════════════ */
+.villain-card {
+  margin-top: 36px;
+  border-radius: var(--r3);
+  overflow: hidden;
+  position: relative;
+  background: var(--ink3);
+  border: 1px solid rgba(247,37,133,.2);
+}
+.villain-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, var(--pk), var(--v), transparent);
+}
+.villain-glow {
+  position: absolute; width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(247,37,133,.12), transparent 65%);
+  top: -100px; right: -50px; pointer-events: none;
+}
+.villain-body {
+  padding: 44px 48px;
+  position: relative; z-index: 1;
+}
+.villain-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: .62rem; font-weight: 700; letter-spacing: .25em;
+  text-transform: uppercase; color: var(--pk);
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 20px;
+}
+.villain-tag::before { content: ''; width: 16px; height: 1px; background: var(--pk); }
+.villain-title {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  line-height: 1.1; color: var(--paper);
+  margin-bottom: 20px;
+}
+.villain-title .red { color: var(--pk); }
+.villain-text { font-size: .98rem; color: var(--muted); line-height: 1.85; }
+.villain-text strong { color: #ff9999; }
+.villain-warn {
+  margin-top: 20px; padding: 16px 20px;
+  background: rgba(247,37,133,.07);
+  border: 1px solid rgba(247,37,133,.2);
+  border-radius: 12px;
+  font-size: .88rem; color: rgba(247,150,160,.9);
+  line-height: 1.6;
+}
+.villain-warn::before { content: '→ '; }
 
-/* ── SCROLLBAR ── */
-::-webkit-scrollbar{width:5px;}
-::-webkit-scrollbar-track{background:var(--bg);}
-::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+@media (max-width: 600px) { .villain-body { padding: 28px 24px; } }
 
-@media(max-width:640px){
-  #hero{padding-top:150px;}
-  #top-banner{height:220px;}
-  .villain-inner{padding:24px 20px;}
-  .prize-row{padding:18px 20px;}
-  .ae{grid-template-columns:60px 1fr;}
-  .ae img{width:60px;height:60px;}
-  nav a{font-size:.7rem;padding:9px 12px;}
+/* ════════════════════════════════════════════
+   TEAM
+════════════════════════════════════════════ */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px; margin-top: 36px;
+}
+.tc {
+  background: var(--ink3);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 20px 18px;
+  display: flex; align-items: center; gap: 14px;
+  transition: all .25s cubic-bezier(.16,1,.3,1);
+  position: relative; overflow: hidden;
+}
+.tc::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(155,93,229,.08), transparent);
+  opacity: 0; transition: opacity .25s;
+}
+.tc:hover { border-color: rgba(155,93,229,.45); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,.4), 0 0 30px rgba(155,93,229,.1); }
+.tc:hover::after { opacity: 1; }
+.tc-av {
+  width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: .9rem; color: #fff;
+  background: var(--ta, var(--gv));
+  box-shadow: 0 4px 16px rgba(0,0,0,.3);
+}
+.tc-name { font-family: 'Dela Gothic One', sans-serif; font-size: .9rem; color: var(--paper); letter-spacing: .01em; }
+.tc-role { font-family: 'Space Mono', monospace; font-size: .62rem; color: var(--muted); margin-top: 3px; letter-spacing: .04em; }
+
+/* ════════════════════════════════════════════
+   CONTEST / PRIZES
+════════════════════════════════════════════ */
+.prize-shell {
+  margin-top: 36px;
+  border: 1px solid var(--line);
+  border-radius: var(--r3);
+  overflow: hidden;
+}
+.prize-head {
+  padding: 32px 40px 28px;
+  background: linear-gradient(135deg, rgba(155,93,229,.12), rgba(247,37,133,.07));
+  border-bottom: 1px solid var(--line);
+  position: relative; overflow: hidden;
+}
+.prize-head::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: var(--gv);
+}
+.prize-head-title {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1.3rem; color: var(--paper);
+  display: flex; align-items: center; gap: 12px;
+}
+.prize-head-title::before { content: '🏆'; font-size: 1.4rem; }
+
+.prize-row {
+  display: flex; align-items: flex-start; gap: 18px;
+  padding: 26px 40px;
+  border-bottom: 1px solid var(--line);
+  transition: background .2s;
+  position: relative;
+}
+.prize-row:last-child { border-bottom: none; }
+.prize-row:hover { background: rgba(255,255,255,.02); }
+
+.prize-medal {
+  width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Dela Gothic One', sans-serif; font-size: .9rem;
+  margin-top: 2px;
+}
+.m1 { background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000; box-shadow: 0 4px 20px rgba(255,200,0,.3); }
+.m2 { background: linear-gradient(135deg, #e0e0e0, #9e9e9e); color: #000; }
+.m3 { background: linear-gradient(135deg, #bf8970, #6d4c41); color: #fff; }
+
+.prize-info-title {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1rem; color: var(--paper); margin-bottom: 6px;
+  display: flex; align-items: center; gap: 8px;
+}
+.prize-info-body { font-size: .86rem; color: var(--muted); line-height: 1.6; }
+
+@media (max-width: 600px) {
+  .prize-head, .prize-row { padding-left: 22px; padding-right: 22px; }
+}
+
+/* ════════════════════════════════════════════
+   RULES
+════════════════════════════════════════════ */
+.rules-wrap {
+  margin-top: 36px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.rule {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: var(--ink3); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 18px 22px;
+  transition: border-color .25s, background .25s;
+}
+.rule:hover { border-color: rgba(76,201,240,.3); background: var(--ink4); }
+.rule-n {
+  font-family: 'Space Mono', monospace;
+  font-size: .65rem; font-weight: 700; color: var(--cy);
+  background: rgba(76,201,240,.08);
+  border-radius: 8px; padding: 5px 9px;
+  flex-shrink: 0; letter-spacing: .08em; margin-top: 1px;
+}
+.rule-t { font-size: .92rem; color: var(--muted); line-height: 1.7; }
+.rule-t strong { color: var(--paper); font-weight: 600; }
+
+/* ════════════════════════════════════════════
+   UPLOAD
+════════════════════════════════════════════ */
+.drop-box {
+  margin-top: 36px;
+  border: 1.5px dashed rgba(155,93,229,.3);
+  border-radius: var(--r2);
+  padding: 56px 32px; text-align: center;
+  position: relative; overflow: hidden; cursor: pointer;
+  background: rgba(155,93,229,.03);
+  transition: all .3s;
+}
+.drop-box:hover, .drop-box.over {
+  border-color: var(--v);
+  background: rgba(155,93,229,.08);
+  box-shadow: 0 0 50px rgba(155,93,229,.12);
+}
+.drop-box input[type=file] {
+  position: absolute; inset: 0; opacity: 0;
+  cursor: pointer; width: 100%; height: 100%;
+}
+.drop-icon {
+  width: 56px; height: 56px; border-radius: 16px;
+  background: linear-gradient(135deg, rgba(155,93,229,.25), rgba(247,37,133,.15));
+  border: 1px solid rgba(155,93,229,.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; margin: 0 auto 18px;
+  box-shadow: 0 8px 24px rgba(155,93,229,.2);
+}
+.drop-ttl {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1.1rem; color: var(--paper); margin-bottom: 6px;
+}
+.drop-sub { font-family: 'Space Mono', monospace; font-size: .7rem; color: var(--muted); }
+
+#prev-wrap { margin-top: 18px; display: none; }
+#prev-img { max-height: 220px; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 0 40px rgba(155,93,229,.2); }
+
+.fields { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+.fi {
+  background: var(--ink3); border: 1px solid var(--line);
+  border-radius: 12px; padding: 14px 18px;
+  color: var(--paper); font-family: 'Syne', sans-serif;
+  font-size: .92rem; outline: none; width: 100%;
+  transition: border-color .25s, box-shadow .25s;
+}
+.fi:focus { border-color: var(--v); box-shadow: 0 0 20px rgba(155,93,229,.15); }
+.fi::placeholder { color: var(--dim); }
+textarea.fi { resize: vertical; min-height: 80px; }
+
+.priv-note {
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem; line-height: 1.65; color: var(--muted);
+  background: rgba(76,201,240,.04);
+  border: 1px solid rgba(76,201,240,.12);
+  border-radius: 10px; padding: 12px 16px;
+}
+.priv-note strong { color: var(--cy); }
+
+.btn-main {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--gv);
+  color: #fff; font-family: 'Dela Gothic One', sans-serif;
+  font-size: .9rem; letter-spacing: .04em;
+  border: none; border-radius: 12px; padding: 17px 36px;
+  cursor: pointer; transition: transform .25s, box-shadow .25s;
+  box-shadow: 0 6px 30px rgba(155,93,229,.35);
+  align-self: flex-start;
+}
+.btn-main:hover { transform: translateY(-3px); box-shadow: 0 14px 50px rgba(155,93,229,.5), 0 0 30px rgba(247,37,133,.3); }
+.btn-main:active { transform: none; }
+
+/* ════════════════════════════════════════════
+   GALLERY
+════════════════════════════════════════════ */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 14px; margin-top: 36px;
+}
+.gi {
+  background: var(--ink3); border: 1px solid var(--line);
+  border-radius: var(--r2); overflow: hidden;
+  cursor: pointer; position: relative;
+  transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s, border-color .35s;
+}
+.gi:hover { transform: translateY(-6px) scale(1.015); box-shadow: 0 28px 70px rgba(0,0,0,.5), 0 0 40px rgba(155,93,229,.15); border-color: rgba(155,93,229,.4); }
+.gi-img { width: 100%; height: 200px; object-fit: cover; display: block; transition: transform .5s; }
+.gi:hover .gi-img { transform: scale(1.06); }
+.gi-meta { padding: 14px 16px; }
+.gi-author { font-family: 'Dela Gothic One', sans-serif; font-size: .8rem; color: var(--paper); }
+.gi-desc { font-size: .78rem; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+.gi-badge {
+  position: absolute; top: 11px; right: 11px;
+  font-family: 'Space Mono', monospace; font-size: .6rem; font-weight: 700;
+  padding: 5px 11px; border-radius: 100px; letter-spacing: .08em;
+}
+.gb1 { background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000; }
+.gb2 { background: linear-gradient(135deg, #e0e0e0, #9e9e9e); color: #000; }
+.gb3 { background: linear-gradient(135deg, #bf8970, #6d4c41); color: #fff; }
+
+.empty-g {
+  grid-column: 1/-1; text-align: center;
+  padding: 80px 20px; color: var(--dim);
+}
+.eg-line { width: 50px; height: 1px; background: var(--line); margin: 16px auto; }
+.eg-txt { font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: .1em; }
+
+/* ════════════════════════════════════════════
+   LIGHTBOX
+════════════════════════════════════════════ */
+#lbox {
+  position: fixed; inset: 0; background: rgba(0,0,0,.95);
+  z-index: 1000; display: none; align-items: center; justify-content: center;
+  backdrop-filter: blur(20px);
+}
+#lbox.on { display: flex; animation: fadeIn .2s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+#lbox-img { max-width: 92vw; max-height: 88vh; border-radius: 16px; box-shadow: 0 0 100px rgba(155,93,229,.4); }
+#lbox-x {
+  position: absolute; top: 22px; right: 28px;
+  font-size: 1.8rem; color: rgba(255,255,255,.4);
+  cursor: pointer; background: none; border: none;
+  transition: color .2s; font-family: 'Space Mono', monospace;
+  line-height: 1;
+}
+#lbox-x:hover { color: #fff; }
+
+/* ════════════════════════════════════════════
+   ADMIN
+════════════════════════════════════════════ */
+#adm-btn {
+  position: fixed; bottom: 26px; right: 26px;
+  width: 46px; height: 46px; border-radius: 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; cursor: pointer; z-index: 500;
+  backdrop-filter: blur(16px);
+  transition: all .25s; font-family: 'Space Mono', monospace;
+  color: var(--dim);
+}
+#adm-btn:hover { background: rgba(155,93,229,.15); border-color: var(--v); box-shadow: 0 0 20px rgba(155,93,229,.2); color: var(--vl); }
+
+#adm-modal {
+  position: fixed; inset: 0; background: rgba(0,0,0,.9);
+  z-index: 2000; display: none; align-items: center; justify-content: center;
+  backdrop-filter: blur(20px); padding: 20px;
+}
+#adm-modal.on { display: flex; animation: fadeIn .25s ease; }
+
+.adm-box {
+  background: var(--ink3);
+  border: 1px solid rgba(155,93,229,.3);
+  border-radius: var(--r3);
+  width: 100%; max-width: 860px; max-height: 90vh;
+  overflow-y: auto; padding: 38px;
+  box-shadow: 0 0 80px rgba(155,93,229,.2); position: relative;
+}
+.adm-box::-webkit-scrollbar { width: 4px; }
+.adm-box::-webkit-scrollbar-thumb { background: var(--v); border-radius: 2px; }
+
+.adm-ttl {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1.2rem; color: var(--paper); margin-bottom: 26px;
+  display: flex; align-items: center; gap: 10px;
+}
+.adm-ttl span { color: var(--v); }
+
+#adm-login-s p { font-size: .9rem; color: var(--muted); margin-bottom: 16px; }
+.adm-close {
+  position: absolute; top: 20px; right: 24px;
+  background: none; border: none; color: rgba(255,255,255,.3);
+  font-size: 1.5rem; cursor: pointer; transition: color .2s;
+  font-family: 'Space Mono', monospace; line-height: 1;
+}
+.adm-close:hover { color: #fff; }
+
+.adm-entries { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.ae {
+  background: var(--ink); border: 1px solid var(--line);
+  border-radius: 14px; padding: 16px 18px;
+  display: grid; grid-template-columns: 80px 1fr; gap: 16px; align-items: start;
+}
+.ae img { width: 80px; height: 80px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
+.ae-nm { font-family: 'Dela Gothic One', sans-serif; font-size: .82rem; color: var(--paper); margin-bottom: 4px; }
+.ae-ct { font-family: 'Space Mono', monospace; font-size: .74rem; color: var(--cy); margin-bottom: 3px; }
+.ae-ch { font-size: .78rem; color: #c0b8e8; margin-bottom: 2px; }
+.ae-ds { font-size: .76rem; color: var(--muted); font-style: italic; }
+.ae-tm { font-family: 'Space Mono', monospace; font-size: .65rem; color: var(--dim); margin-top: 6px; }
+.ae-acts { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.ap {
+  font-family: 'Space Mono', monospace;
+  font-size: .6rem; font-weight: 700; letter-spacing: .06em;
+  border: none; border-radius: 8px; padding: 7px 12px;
+  cursor: pointer; transition: opacity .2s, transform .2s; opacity: .85;
+}
+.ap:hover { opacity: 1; transform: translateY(-1px); }
+.a1 { background: linear-gradient(135deg, #ffd700, #ff8c00); color: #000; }
+.a2 { background: linear-gradient(135deg, #e0e0e0, #9e9e9e); color: #000; }
+.a3 { background: linear-gradient(135deg, #bf8970, #6d4c41); color: #fff; }
+.a0 { background: rgba(255,255,255,.07); color: var(--muted); }
+.a-del {
+  font-family: 'Space Mono', monospace; font-size: .6rem; font-weight: 700;
+  background: rgba(247,37,133,.1); border: 1px solid rgba(247,37,133,.25);
+  color: #ff8080; border-radius: 8px; padding: 7px 12px;
+  cursor: pointer; transition: background .2s; letter-spacing: .06em;
+}
+.a-del:hover { background: rgba(247,37,133,.25); }
+.ae-pl { font-family: 'Space Mono', monospace; font-size: .68rem; color: var(--gd); margin-top: 7px; }
+
+/* ════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════ */
+footer {
+  position: relative; z-index: 3;
+  border-top: 1px solid var(--line);
+  padding: 50px 24px 70px; text-align: center;
+}
+.ft-logo {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1.4rem;
+  background: var(--gv);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; margin-bottom: 12px;
+}
+footer p {
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem; color: var(--muted); line-height: 2;
+  letter-spacing: .04em;
+}
+
+/* ════════════════════════════════════════════
+   NOTIF
+════════════════════════════════════════════ */
+#notif {
+  position: fixed; bottom: 32px; left: 50%;
+  transform: translateX(-50%) translateY(90px);
+  background: var(--gv);
+  color: #fff; font-family: 'Space Mono', monospace;
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em;
+  padding: 14px 28px; border-radius: 100px;
+  z-index: 9999; transition: transform .45s cubic-bezier(.34,1.56,.64,1);
+  pointer-events: none; box-shadow: 0 10px 40px rgba(155,93,229,.45);
+  white-space: nowrap;
+}
+#notif.on { transform: translateX(-50%) translateY(0); }
+
+/* ════════════════════════════════════════════
+   SCROLLBAR
+════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: var(--vm); border-radius: 3px; }
+
+/* ════════════════════════════════════════════
+   RESPONSIVE MISC
+════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  #hero { padding-top: 160px; }
+  #banner { height: 230px; }
+  nav a { font-size: .62rem; padding: 9px 13px; }
+  .ae { grid-template-columns: 60px 1fr; }
+  .ae img { width: 60px; height: 60px; }
 }
 </style>
 </head>
 <body>
 
-<canvas id="canvas-bg"></canvas>
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur2"></div>
+
+<!-- NOISE -->
+<div id="noise"></div>
+
+<!-- ORBS -->
+<div class="orb o1"></div>
+<div class="orb o2"></div>
+<div class="orb o3"></div>
+<div class="orb o4"></div>
 
 <!-- BANNER -->
-<div id="top-banner">
-  <img src="photo_2026-06-03_01-41-54.jpg" alt="Забудь Всё">
+<div id="banner">
+  <div class="scan"></div>
+  <img src="banner.jpg" alt="Забудь Всё">
 </div>
 
 <!-- HERO -->
 <div id="hero">
-  <div class="logo-wrap">
-    <div class="logo-eyebrow">Официальный сайт</div>
-    <div class="logo-main">ЗАБУДЬ ВСЁ</div>
-    <div class="logo-sub">Авторский анимационный сериал</div>
-  </div>
-  <nav>
-    <div class="nav-pill">
-      <a href="#about">О сериале</a>
-      <a href="#villain">Злодей</a>
-      <a href="#team">Команда</a>
-      <a href="#contest">Конкурс</a>
-      <a href="#rules">Правила</a>
-      <a href="#gallery-section">Галерея</a>
-    </div>
+  <div class="hero-eyebrow"><span></span> Официальный сайт <span></span></div>
+  <div class="hero-title"><span class="t1">ЗАБУДЬ ВСЁ</span></div>
+  <div class="hero-sub">// Авторский анимационный сериал</div>
+  <div class="hero-badge">Сайт команды аниматоров</div>
+</div>
+
+<!-- NAV -->
+<div id="nav-wrap">
+  <nav class="nav-bar">
+    <a href="#about">О сериале</a>
+    <a href="#villain">Злодей</a>
+    <a href="#team">Команда</a>
+    <a href="#contest">Конкурс</a>
+    <a href="#rules">Правила</a>
+    <a href="#gallery-s">Галерея</a>
   </nav>
 </div>
 
 <main>
 
   <!-- О СЕРИАЛЕ -->
-  <section id="about" class="reveal">
-    <div class="label">Лор</div>
-    <h2>Что такое <em>«Забудь Всё»</em></h2>
-    <p>«Забудь Всё» — безумный, абсурдный и неожиданно цепляющий авторский анимационный сериал. История о мире, где всё не так, как кажется, а за каждым углом — либо чистый рофл, либо неожиданно серьёзный лор, который застаёт врасплох.</p>
-    <p>Сочетание взрывного юмора, неожиданных твистов и пасхалок в каждой серии. Чем больше смотришь — тем больше замечаешь.</p>
-    <div class="grid-3">
-      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent),var(--accent2))">
-        <div class="cell-num">001</div>
-        <div class="cell-title">Мир сериала</div>
-        <div class="cell-body">Вселенная, где обычные предметы — полноценные персонажи, а логика работает ровно до следующей сцены.</div>
+  <section id="about" class="rv">
+    <div class="sh"><div class="sh-tag">Лор_01</div><div class="sh-line"></div></div>
+    <h2>Что такое <span class="c">«Забудь Всё»?</span></h2>
+    <p class="body-text">«Забудь Всё» — безумный, абсурдный и неожиданно цепляющий авторский анимационный сериал. История о мире, где всё не так, как кажется, а за каждым углом — либо чистый рофл, либо неожиданно серьёзный лор.</p>
+    <p class="body-text">Сочетание взрывного юмора, неожиданных твистов и пасхалок в каждой серии. Чем больше смотришь — тем больше замечаешь.</p>
+    <div class="bento">
+      <div class="bn">
+        <div class="bn-num">001 — Вселенная</div>
+        <div class="bn-title">Мир сериала</div>
+        <div class="bn-body">Вселенная, где обычные предметы — полноценные персонажи. Логика работает ровно до следующей сцены. Всё связано, ничего не случайно.</div>
+        <div class="bn-big">世</div>
       </div>
-      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent2),var(--gold))">
-        <div class="cell-num">002</div>
-        <div class="cell-title">Персонажи</div>
-        <div class="cell-body">Каждый герой — личность. Своя история, свой характер, своя роль в большой игре. И да, среди них есть синяя изолента.</div>
+      <div class="bn">
+        <div class="bn-num">002 — Герои</div>
+        <div class="bn-title">Персонажи</div>
+        <div class="bn-body">У каждого своя история. Своя роль в большой игре. И да, среди них есть синяя изолента.</div>
       </div>
-      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--gold),var(--accent3))">
-        <div class="cell-num">003</div>
-        <div class="cell-title">Пасхалки</div>
-        <div class="cell-body">Охота за деталями — часть просмотра. 3-я серия будет особенной: в ней появится след победителя нашего конкурса.</div>
+      <div class="bn">
+        <div class="bn-num">003 — Секреты</div>
+        <div class="bn-title">Пасхалки</div>
+        <div class="bn-body">Каждая серия — охота за деталями. 3-я серия особенная: в ней появится след победителя нашего конкурса.</div>
       </div>
-      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent3),var(--accent))">
-        <div class="cell-num">004</div>
-        <div class="cell-title">Юмор</div>
-        <div class="cell-body">Абсурд, самоирония, внезапная серьёзность посреди полного хаоса. «Забудь Всё» — это не обычный мультик.</div>
+      <div class="bn">
+        <div class="bn-num">004 — Тон</div>
+        <div class="bn-title">Юмор</div>
+        <div class="bn-body">Абсурд, самоирония, внезапная серьёзность посреди хаоса. «Забудь Всё» — не обычный мультик.</div>
       </div>
-      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent),var(--accent3))">
-        <div class="cell-num">005</div>
-        <div class="cell-title">Авторский стиль</div>
-        <div class="cell-body">Каждый аниматор вносит кусочек себя — поэтому каждая серия ощущается по-особенному.</div>
+      <div class="bn">
+        <div class="bn-num">005 — Подход</div>
+        <div class="bn-title">Авторский стиль</div>
+        <div class="bn-body">Каждый аниматор вносит кусочек себя — поэтому каждая серия ощущается по-особенному. Нет шаблонов.</div>
       </div>
-      <div class="lore-cell" style="--lc:linear-gradient(90deg,var(--accent2),var(--accent))">
-        <div class="cell-num">006</div>
-        <div class="cell-title">Лор</div>
-        <div class="cell-body">За рофлом скрывается настоящая мифология. Кто забыл? Кого забыли? Что вообще происходит?</div>
+      <div class="bn">
+        <div class="bn-num">006 — Глубина</div>
+        <div class="bn-title">Лор</div>
+        <div class="bn-body">За рофлом скрывается настоящая мифология. Кто забыл? Кого забыли? Что вообще происходит?</div>
       </div>
     </div>
   </section>
 
   <!-- ЗЛОДЕЙ -->
-  <section id="villain" class="reveal">
-    <div class="label">1 сезон</div>
-    <h2>Главный злодей — <em>Синяя Изолента</em></h2>
-    <div class="villain-wrap">
-      <div class="villain-inner">
-        <div class="villain-tag">Персонаж · 1 сезон</div>
-        <div class="villain-title">Тот, кого <span>забыли</span></div>
-        <p class="villain-body">Синяя изолента — главный злодей первого сезона «Забудь Всё». История трагичная и абсурдная одновременно: аниматоры буквально <strong>забыли про него</strong>. Он существовал в мире сериала, но был стёрт из памяти — и теперь хочет напомнить о себе любой ценой.</p>
-        <p class="villain-body" style="margin-top:12px;">Синяя изолента скрепляет, сдерживает и запечатывает. Одни думают, что именно она удерживает этот мир от распада. Другие — что она и есть причина всех проблем.</p>
-        <p class="villain-body" style="margin-top:14px;color:rgba(255,100,100,.9);font-weight:500;">Хочешь нарисовать арт с Синей Изолентой? Засчитывается как персонаж из вселенной «Забудь Всё».</p>
+  <section id="villain" class="rv">
+    <div class="sh"><div class="sh-tag">Лор_02 — 1 сезон</div><div class="sh-line"></div></div>
+    <h2>Главный злодей — <span class="cv">Синяя Изолента</span></h2>
+    <div class="villain-card">
+      <div class="villain-glow"></div>
+      <div class="villain-body">
+        <div class="villain-tag">Персонаж · Сезон 1 · Антагонист</div>
+        <div class="villain-title">Тот, кого <span class="red">забыли</span></div>
+        <p class="villain-text">Синяя изолента — главный злодей первого сезона «Забудь Всё». История трагичная и абсурдная одновременно: аниматоры буквально <strong>забыли про него</strong>. Он существовал в мире сериала, но был стёрт из памяти — и теперь хочет напомнить о себе любой ценой.</p>
+        <p class="villain-text" style="margin-top:14px;">Синяя изолента скрепляет, сдерживает и запечатывает. Одни думают, что именно она удерживает этот мир от распада. Другие — что она и есть причина всех проблем.</p>
+        <div class="villain-warn">Хочешь нарисовать арт с Синей Изолентой? Засчитывается как персонаж из вселенной «Забудь Всё».</div>
       </div>
     </div>
   </section>
 
   <!-- КОМАНДА -->
-  <section id="team" class="reveal">
-    <div class="label">Аниматоры</div>
-    <h2>Команда <em>«Забудь Всё»</em></h2>
-    <p>Сериал создаётся этими людьми. Каждый вкладывает кусочек себя в каждую серию.</p>
+  <section id="team" class="rv">
+    <div class="sh"><div class="sh-tag">Авторы</div><div class="sh-line"></div></div>
+    <h2>Команда <span class="c">«Забудь Всё»</span></h2>
+    <p class="body-text">Сериал создаётся этими людьми. Каждый вкладывает кусочек себя в каждую серию.</p>
     <div class="team-grid">
-      <div class="tc"><div class="tc-dot">АН</div><div><div class="tc-name">Ананас</div><div class="tc-role">Главный аниматор</div></div></div>
-      <div class="tc"><div class="tc-dot">СК</div><div><div class="tc-name">Скотч</div><div class="tc-role">Сценарист</div></div></div>
-      <div class="tc"><div class="tc-dot">КР</div><div><div class="tc-name">Крикс</div><div class="tc-role">Аниматор</div></div></div>
-      <div class="tc"><div class="tc-dot">СТ</div><div><div class="tc-name">Стик</div><div class="tc-role">Аудиодизайн</div></div></div>
-      <div class="tc"><div class="tc-dot">ЛБ</div><div><div class="tc-name">Лебби</div><div class="tc-role">Аниматор</div></div></div>
-      <div class="tc"><div class="tc-dot">АР</div><div><div class="tc-name">Артинс</div><div class="tc-role">Создатель сайта</div></div></div>
-      <div class="tc"><div class="tc-dot">БЛ</div><div><div class="tc-name">Блэк</div><div class="tc-role">Аниматор</div></div></div>
-      <div class="tc"><div class="tc-dot">+</div><div><div class="tc-name">...и приятели</div><div class="tc-role">Команда «Забудь Всё»</div></div></div>
+      <div class="tc" style="--ta: linear-gradient(135deg,#f72585,#7209b7)">
+        <div class="tc-av">АН</div>
+        <div><div class="tc-name">Ананас</div><div class="tc-role">Главный аниматор</div></div>
+      </div>
+      <div class="tc" style="--ta: linear-gradient(135deg,#9b5de5,#4361ee)">
+        <div class="tc-av">СК</div>
+        <div><div class="tc-name">Скотч</div><div class="tc-role">Сценарист</div></div>
+      </div>
+      <div class="tc" style="--ta: linear-gradient(135deg,#4cc9f0,#4361ee)">
+        <div class="tc-av">КР</div>
+        <div><div class="tc-name">Крикс</div><div class="tc-role">Аниматор</div></div>
+      </div>
+      <div class="tc" style="--ta: linear-gradient(135deg,#06d6a0,#4cc9f0)">
+        <div class="tc-av">СТ</div>
+        <div><div class="tc-name">Стик</div><div class="tc-role">Аудиодизайн</div></div>
+      </div>
+      <div class="tc" style="--ta: linear-gradient(135deg,#ffd166,#f72585)">
+        <div class="tc-av">ЛБ</div>
+        <div><div class="tc-name">Лебби</div><div class="tc-role">Аниматор</div></div>
+      </div>
+      <div class="tc" style="--ta: linear-gradient(135deg,#7209b7,#3a0ca3)">
+        <div class="tc-av">АР</div>
+        <div><div class="tc-name">Артинс</div><div class="tc-role">Создатель сайта</div></div>
+      </div>
+      <div class="tc" style="--ta: linear-gradient(135deg,#1a1a2e,#9b5de5)">
+        <div class="tc-av">БЛ</div>
+        <div><div class="tc-name">Блэк</div><div class="tc-role">Аниматор</div></div>
+      </div>
+      <div class="tc" style="--ta: linear-gradient(135deg,#3a0ca3,#4cc9f0)">
+        <div class="tc-av">+</div>
+        <div><div class="tc-name">...и приятели</div><div class="tc-role">Команда «Забудь Всё»</div></div>
+      </div>
     </div>
   </section>
 
   <!-- КОНКУРС -->
-  <section id="contest" class="reveal">
-    <div class="label">Событие</div>
-    <h2>Конкурс <em>фан-артов</em></h2>
-    <p>Команда официально объявляет конкурс фан-арта «Забудь Всё». Лучшие работы останутся на сайте навсегда, а победитель получит кое-что по-настоящему особенное.</p>
-    <div class="prize-wrap">
-      <div class="prize-top">
-        <div class="label" style="margin-bottom:10px;">Призы</div>
-        <h3 style="font-family:'Unbounded',sans-serif;font-size:1.1rem;font-weight:900;color:var(--text);">Что ждёт победителей</h3>
+  <section id="contest" class="rv">
+    <div class="sh"><div class="sh-tag">Событие</div><div class="sh-line"></div></div>
+    <h2>Конкурс <span class="cv">фан-артов 🎨</span></h2>
+    <p class="body-text">Команда официально объявляет конкурс фан-арта «Забудь Всё»! Мы хотим видеть ваш взгляд на наших персонажей. Лучшие работы останутся на сайте навсегда, а победитель получит кое-что по-настоящему особенное.</p>
+    <div class="prize-shell">
+      <div class="prize-head">
+        <div class="prize-head-title">Что ждёт победителей</div>
       </div>
       <div class="prize-row">
-        <div class="prize-num p1">1</div>
+        <div class="prize-medal m1">1</div>
         <div>
-          <div class="prize-title">Пасхалка в 3-й серии</div>
-          <div class="prize-desc">Отсылка на твой арт или твой персонаж появится в 3-й серии «Забудь Всё». Работа навсегда остаётся на сайте с отметкой победителя.</div>
+          <div class="prize-info-title">🥇 Пасхалка в 3-й серии!</div>
+          <div class="prize-info-body">Отсылка на твой арт или персонаж появится в 3-й серии «Забудь Всё». Работа навсегда остаётся на сайте с отметкой победителя.</div>
         </div>
       </div>
       <div class="prize-row">
-        <div class="prize-num p2">2</div>
+        <div class="prize-medal m2">2</div>
         <div>
-          <div class="prize-title">Почётное место в галерее</div>
-          <div class="prize-desc">Арт навсегда остаётся на сайте с серебряной отметкой призёра.</div>
+          <div class="prize-info-title">🥈 Почётное место в галерее</div>
+          <div class="prize-info-body">Арт навсегда остаётся на сайте с серебряной отметкой призёра.</div>
         </div>
       </div>
       <div class="prize-row">
-        <div class="prize-num p3">3</div>
+        <div class="prize-medal m3">3</div>
         <div>
-          <div class="prize-title">Место в галерее</div>
-          <div class="prize-desc">Работа сохраняется с бронзовой отметкой призёра.</div>
+          <div class="prize-info-title">🥉 Место в галерее</div>
+          <div class="prize-info-body">Работа сохраняется с бронзовой отметкой призёра.</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ПРАВИЛА -->
-  <section id="rules" class="reveal">
-    <div class="label">Условия участия</div>
-    <h2><em>Правила</em> конкурса</h2>
-    <ul class="rules-list">
-      <li class="rule-item"><span class="rn">01</span><span class="rule-text"><strong>Главное условие:</strong> на арте обязательно должны быть изображены минимум 2–3 персонажа — члены команды аниматоров (Скотч, Ананас, Крикс, Стик, Лебби, Артинс, Блэк и др.) или персонажи из вселенной «Забудь Всё».</span></li>
-      <li class="rule-item"><span class="rn">02</span><span class="rule-text">Объекты вселенной считаются. <strong>Синяя Изолента</strong> (главный злодей 1 сезона) и другие персонажи из мира сериала — полноценные участники арта.</span></li>
-      <li class="rule-item"><span class="rn">03</span><span class="rule-text"><strong>Свои персонажи приветствуются.</strong> Можно добавить собственного OC в арт, если рядом с ним есть хотя бы 2 персонажа из «Забудь Всё» или команды аниматоров.</span></li>
-      <li class="rule-item"><span class="rn">04</span><span class="rule-text">Арт должен быть <strong>оригинальным</strong> — твоей собственной работой. Никаких прямых трейсов без значительных изменений.</span></li>
-      <li class="rule-item"><span class="rn">05</span><span class="rule-text">Можно использовать <strong>любую технику</strong>: цифровой арт, рисунок от руки, коллаж. Важны идея и исполнение.</span></li>
-      <li class="rule-item"><span class="rn">06</span><span class="rule-text">Загружая работу, ты соглашаешься, что арт может быть опубликован на этом сайте и упомянут командой «Забудь Всё» с указанием автора.</span></li>
-      <li class="rule-item"><span class="rn">07</span><span class="rule-text"><strong>Один участник — одна работа.</strong> Хочешь заменить? Загрузи новый арт и напиши об этом в описании.</span></li>
-      <li class="rule-item"><span class="rn">08</span><span class="rule-text">Никакого контента 18+, агрессии и материалов не по теме. Уважай других участников.</span></li>
-    </ul>
+  <section id="rules" class="rv">
+    <div class="sh"><div class="sh-tag">Условия</div><div class="sh-line"></div></div>
+    <h2><span class="c">Правила</span> конкурса 📋</h2>
+    <div class="rules-wrap">
+      <div class="rule"><span class="rule-n">01</span><span class="rule-t"><strong>Главное условие:</strong> на арте обязательно должны быть изображены <strong>минимум 2–3 персонажа</strong> — члены команды аниматоров (Скотч, Ананас, Крикс, Стик, Лебби, Артинс, Блэк и др.) или персонажи из вселенной «Забудь Всё».</span></div>
+      <div class="rule"><span class="rule-n">02</span><span class="rule-t">Объекты вселенной считаются! <strong>Синяя Изолента</strong> (главный злодей 1 сезона) и другие персонажи из мира сериала — полноценные участники арта.</span></div>
+      <div class="rule"><span class="rule-n">03</span><span class="rule-t"><strong>Свои персонажи приветствуются!</strong> Можно добавить собственного OC в арт, если рядом с ним есть хотя бы 2 персонажа из «Забудь Всё» или команды аниматоров.</span></div>
+      <div class="rule"><span class="rule-n">04</span><span class="rule-t">Арт должен быть <strong>оригинальным</strong> — твоей собственной работой. Никаких прямых трейсов без значительных изменений.</span></div>
+      <div class="rule"><span class="rule-n">05</span><span class="rule-t">Можно использовать <strong>любую технику:</strong> цифровой арт, рисунок от руки, коллаж. Важны идея и исполнение.</span></div>
+      <div class="rule"><span class="rule-n">06</span><span class="rule-t">Загружая работу, ты соглашаешься, что арт может быть опубликован на этом сайте и упомянут командой «Забудь Всё» с указанием автора.</span></div>
+      <div class="rule"><span class="rule-n">07</span><span class="rule-t"><strong>Один участник — одна работа.</strong> Хочешь заменить? Загрузи новый арт и напиши об этом в описании.</span></div>
+      <div class="rule"><span class="rule-n">08</span><span class="rule-t">Никакого контента 18+, агрессии и материалов не по теме. Уважай других участников.</span></div>
+    </div>
   </section>
 
   <!-- ЗАГРУЗКА -->
-  <section id="upload" class="reveal">
-    <div class="label">Участвовать</div>
-    <h2>Загрузить <em>свой арт</em></h2>
-    <p>Заполни форму и отправь работу. Арт сразу появится в галерее.</p>
+  <section id="upload" class="rv">
+    <div class="sh"><div class="sh-tag">Участвовать</div><div class="sh-line"></div></div>
+    <h2>Загрузить <span class="cv">свой арт ✦</span></h2>
+    <p class="body-text">Заполни форму и отправь работу. Арт сразу появится в галерее.</p>
 
-    <div class="drop-zone" id="drop-zone">
-      <input type="file" id="file-input" accept="image/*">
-      <div class="dz-icon">↑</div>
-      <div class="dz-title">Перетащи изображение сюда</div>
-      <div class="dz-sub">или нажми, чтобы выбрать файл — JPG, PNG, GIF, WebP</div>
+    <div class="drop-box" id="dz">
+      <input type="file" id="fi" accept="image/*">
+      <div class="drop-icon">↑</div>
+      <div class="drop-ttl">Перетащи изображение сюда</div>
+      <div class="drop-sub">// JPG · PNG · GIF · WebP</div>
     </div>
-    <div id="preview-wrap"><img id="preview-img" src="" alt="Превью"></div>
+    <div id="prev-wrap"><img id="prev-img" src="" alt="Превью"></div>
 
-    <div class="form-fields">
-      <input class="field" type="text" id="author-input" placeholder="Твой ник / имя автора *" maxlength="60">
-      <input class="field" type="text" id="contact-input" placeholder="Контакт для связи: почта, номер телефона или @username в Telegram *" maxlength="120">
-      <input class="field" type="text" id="chars-input" placeholder="Какие персонажи на арте? (напр. Ананас, Крикс, мой OC)" maxlength="200">
-      <textarea class="field" id="desc-input" placeholder="Описание арта — не обязательно..." maxlength="300"></textarea>
-      <div class="privacy-note">Контакт и информация о персонажах видны <strong>только администрации</strong> — для связи с победителями. В публичной галерее они не отображаются.</div>
-      <button class="btn" id="submit-btn">Отправить работу</button>
+    <div class="fields">
+      <input class="fi" type="text" id="f-author" placeholder="Твой ник / имя автора *" maxlength="60">
+      <input class="fi" type="text" id="f-contact" placeholder="Контакт: почта, номер телефона или @username в Telegram *" maxlength="120">
+      <input class="fi" type="text" id="f-chars" placeholder="Какие персонажи на арте? (напр. Ананас, Крикс, мой OC)" maxlength="200">
+      <textarea class="fi" id="f-desc" placeholder="Описание арта — не обязательно..." maxlength="300"></textarea>
+      <div class="priv-note">Контакт и информация о персонажах видны <strong>только администрации</strong> — для связи с победителями. В публичной галерее они не отображаются.</div>
+      <button class="btn-main" id="btn-send">Отправить работу →</button>
     </div>
   </section>
 
   <!-- ГАЛЕРЕЯ -->
-  <section id="gallery-section" class="reveal">
-    <div class="label">Работы участников</div>
-    <h2><em>Галерея</em> фан-артов</h2>
-    <p>Все присланные работы. Победители будут отмечены командой «Забудь Всё».</p>
+  <section id="gallery-s" class="rv">
+    <div class="sh"><div class="sh-tag">Работы участников</div><div class="sh-line"></div></div>
+    <h2><span class="c">Галерея</span> фан-артов 🖼️</h2>
+    <p class="body-text">Все присланные работы. Победители будут отмечены командой «Забудь Всё».</p>
     <div id="gallery">
-      <div class="empty-state">
-        <div class="empty-line"></div>
-        <p>Пока нет работ — стань первым</p>
-        <div class="empty-line"></div>
+      <div class="empty-g">
+        <div class="eg-line"></div>
+        <div class="eg-txt">пока нет работ — стань первым</div>
+        <div class="eg-line"></div>
       </div>
     </div>
   </section>
@@ -634,193 +1001,159 @@ footer p{font-size:.8rem;color:var(--muted);line-height:1.8;}
   <p>Конкурс фан-артов · Победитель получит пасхалку в 3-й серии · Сайт — Артинс</p>
 </footer>
 
-<div id="lightbox"><button id="lb-close">✕</button><img id="lb-img" src="" alt=""></div>
-<div id="admin-btn" title="Администратор">◈</div>
+<!-- LIGHTBOX -->
+<div id="lbox"><button id="lbox-x">✕</button><img id="lbox-img" src="" alt=""></div>
 
-<div id="admin-modal">
-  <div class="admin-box">
-    <button class="admin-close" id="admin-close-btn">✕</button>
-    <div class="admin-head">Панель <span>администратора</span></div>
-    <div id="admin-login">
+<!-- ADMIN BTN -->
+<div id="adm-btn">◈</div>
+
+<!-- ADMIN MODAL -->
+<div id="adm-modal">
+  <div class="adm-box">
+    <button class="adm-close" id="adm-x">✕</button>
+    <div class="adm-ttl">Панель <span>администратора</span></div>
+    <div id="adm-login-s">
       <p>Введи пароль для доступа к данным участников</p>
-      <input class="field" type="password" id="admin-pass" placeholder="Пароль..." style="max-width:320px;margin-bottom:12px;">
-      <br><button class="btn" id="admin-login-btn">Войти</button>
-      <p id="admin-err" style="color:var(--red);margin-top:12px;font-size:.8rem;display:none;">Неверный пароль</p>
+      <input class="fi" type="password" id="adm-pw" placeholder="Пароль..." style="max-width:300px;margin-bottom:14px;">
+      <br><button class="btn-main" id="adm-go">Войти →</button>
+      <p id="adm-err" style="color:var(--pk);margin-top:12px;font-family:'Space Mono',monospace;font-size:.72rem;display:none;">// Неверный пароль</p>
     </div>
-    <div id="admin-content" style="display:none;">
-      <p style="color:var(--muted);font-size:.83rem;margin-bottom:4px;">Все участники с контактами. Расставляй места — галерея обновится автоматически.</p>
-      <div class="admin-entries" id="admin-list"></div>
+    <div id="adm-data" style="display:none;">
+      <p style="color:var(--muted);font-family:'Space Mono',monospace;font-size:.72rem;margin-bottom:6px;">// Все участники с контактами. Расставляй места — галерея обновится.</p>
+      <div class="adm-entries" id="adm-list"></div>
     </div>
   </div>
 </div>
 
+<!-- NOTIF -->
 <div id="notif"></div>
 
 <script>
-// ── CANVAS PARTICLES ──
-(function(){
-  const cv=document.getElementById('canvas-bg');
-  const ctx=cv.getContext('2d');
-  let W,H,pts=[];
-  function resize(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
-  resize();
-  window.addEventListener('resize',resize);
-  const colors=['rgba(124,77,255,','rgba(224,64,251,','rgba(0,229,255,'];
-  for(let i=0;i<55;i++){
-    pts.push({
-      x:Math.random()*innerWidth, y:Math.random()*innerHeight,
-      vx:(Math.random()-.5)*.25, vy:(Math.random()-.5)*.25,
-      r:Math.random()*1.8+.4,
-      c:colors[Math.floor(Math.random()*3)],
-      o:Math.random()*.5+.1
-    });
-  }
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=p.c+p.o+')';
-      ctx.fill();
-      p.x+=p.vx; p.y+=p.vy;
-      if(p.x<0)p.x=W; if(p.x>W)p.x=0;
-      if(p.y<0)p.y=H; if(p.y>H)p.y=0;
-    });
-    // lines between close particles
-    for(let i=0;i<pts.length;i++){
-      for(let j=i+1;j<pts.length;j++){
-        const dx=pts[i].x-pts[j].x, dy=pts[i].y-pts[j].y;
-        const d=Math.sqrt(dx*dx+dy*dy);
-        if(d<120){
-          ctx.beginPath();
-          ctx.moveTo(pts[i].x,pts[i].y);
-          ctx.lineTo(pts[j].x,pts[j].y);
-          ctx.strokeStyle='rgba(124,77,255,'+((.12*(1-d/120)))+')';
-          ctx.lineWidth=.5;
-          ctx.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
+/* ══ CURSOR ══ */
+const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
+let mx=0,my=0,cx=0,cy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+setInterval(()=>{cx+=(mx-cx)*.15;cy+=(my-cy)*.15;cur2.style.left=cx+'px';cur2.style.top=cy+'px';},16);
+document.querySelectorAll('a,button,.gi,.tc,.bn,.rule,.prize-row').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='36px';cur.style.height='36px';cur.style.borderColor='var(--pk)';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='20px';cur.style.height='20px';cur.style.borderColor='var(--v)';});
+});
 
-// ── BANNER SCROLL ──
-const banner=document.getElementById('top-banner');
-let lastY=0, visible=true;
+/* ══ BANNER SCROLL ══ */
+const ban=document.getElementById('banner');
+let ly=0,bv=true;
 window.addEventListener('scroll',()=>{
   const y=scrollY;
-  if(y>lastY&&y>130){if(visible){banner.classList.add('hidden');visible=false;}}
-  else{if(!visible){banner.classList.remove('hidden');visible=true;}}
-  lastY=y<=0?0:y;
+  if(y>ly&&y>100){if(bv){ban.classList.add('hide');bv=false;}}
+  else{if(!bv){ban.classList.remove('hide');bv=true;}}
+  ly=y<=0?0:y;
 },{passive:true});
 
-// ── SCROLL REVEAL ──
-const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.07});
-document.querySelectorAll('.reveal').forEach(el=>{io.observe(el);});
+/* ══ SCROLL REVEAL ══ */
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.07});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
-// ── STORAGE ──
-const KEY='zv_arts_v4';
+/* ══ STORAGE ══ */
+const KEY='zv_v5';
 const PASS='zabud_admin_2024';
 const load=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]');}catch{return[];}};
 const save=a=>localStorage.setItem(KEY,JSON.stringify(a));
+const xe=s=>{const d=document.createElement('div');d.textContent=s;return d.innerHTML;};
 
-// ── GALLERY ──
+/* ══ GALLERY ══ */
 const gal=document.getElementById('gallery');
-function renderGallery(){
+function renderG(){
   const arts=load();
   if(!arts.length){
-    gal.innerHTML='<div class="empty-state"><div class="empty-line"></div><p>Пока нет работ — стань первым</p><div class="empty-line"></div></div>';
+    gal.innerHTML='<div class="empty-g"><div class="eg-line"></div><div class="eg-txt">пока нет работ — стань первым</div><div class="eg-line"></div></div>';
     return;
   }
   gal.innerHTML='';
   arts.forEach(a=>{
-    const d=document.createElement('div');
-    d.className='g-item';
+    const d=document.createElement('div');d.className='gi';
     let b='';
-    if(a.place===1)b='<span class="g-badge b1">1 место</span>';
-    else if(a.place===2)b='<span class="g-badge b2">2 место</span>';
-    else if(a.place===3)b='<span class="g-badge b3">3 место</span>';
-    d.innerHTML=`${b}<img class="g-img" src="${a.dataUrl}" alt="${x(a.author)}" loading="lazy"><div class="g-meta"><div class="g-author">${x(a.author)}</div>${a.desc?`<div class="g-desc">${x(a.desc)}</div>`:''}</div>`;
-    d.addEventListener('click',()=>lb(a.dataUrl));
+    if(a.place===1)b='<span class="gi-badge gb1">1 место</span>';
+    else if(a.place===2)b='<span class="gi-badge gb2">2 место</span>';
+    else if(a.place===3)b='<span class="gi-badge gb3">3 место</span>';
+    d.innerHTML=`${b}<img class="gi-img" src="${a.dataUrl}" alt="${xe(a.author)}" loading="lazy"><div class="gi-meta"><div class="gi-author">${xe(a.author)}</div>${a.desc?`<div class="gi-desc">${xe(a.desc)}</div>`:''}</div>`;
+    d.addEventListener('click',()=>openLb(a.dataUrl));
     gal.appendChild(d);
   });
 }
-const x=s=>{const d=document.createElement('div');d.textContent=s;return d.innerHTML;};
 
-// ── FILE ──
-const fi=document.getElementById('file-input'),pw=document.getElementById('preview-wrap'),pi=document.getElementById('preview-img'),dz=document.getElementById('drop-zone');
-let cur=null;
+/* ══ FILE INPUT ══ */
+const fi=document.getElementById('fi'),pw=document.getElementById('prev-wrap'),pi=document.getElementById('prev-img'),dz=document.getElementById('dz');
+let cur_img=null;
 fi.addEventListener('change',e=>{if(e.target.files[0])hf(e.target.files[0]);});
 dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('over');});
 dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
 dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');const f=e.dataTransfer.files[0];if(f&&f.type.startsWith('image/'))hf(f);});
-function hf(f){const r=new FileReader();r.onload=e=>{cur=e.target.result;pi.src=cur;pw.style.display='block';};r.readAsDataURL(f);}
+function hf(f){const r=new FileReader();r.onload=e=>{cur_img=e.target.result;pi.src=cur_img;pw.style.display='block';};r.readAsDataURL(f);}
 
-// ── SUBMIT ──
-document.getElementById('submit-btn').addEventListener('click',()=>{
-  const au=document.getElementById('author-input').value.trim();
-  const co=document.getElementById('contact-input').value.trim();
-  const ch=document.getElementById('chars-input').value.trim();
-  const de=document.getElementById('desc-input').value.trim();
-  if(!cur){notif('Выбери изображение');return;}
-  if(!au){notif('Введи имя автора');return;}
-  if(!co){notif('Введи контакт для связи');return;}
+/* ══ SUBMIT ══ */
+document.getElementById('btn-send').addEventListener('click',()=>{
+  const au=document.getElementById('f-author').value.trim();
+  const co=document.getElementById('f-contact').value.trim();
+  const ch=document.getElementById('f-chars').value.trim();
+  const de=document.getElementById('f-desc').value.trim();
+  if(!cur_img){notif('// выбери изображение!');return;}
+  if(!au){notif('// введи имя автора!');return;}
+  if(!co){notif('// введи контакт для связи!');return;}
   const arts=load();
-  arts.unshift({id:Date.now(),author:au,contact:co,chars:ch,desc:de,dataUrl:cur,place:0,ts:new Date().toISOString()});
-  save(arts);renderGallery();
-  cur=null;pw.style.display='none';pi.src='';
-  ['author-input','contact-input','chars-input','desc-input'].forEach(id=>document.getElementById(id).value='');
+  arts.unshift({id:Date.now(),author:au,contact:co,chars:ch,desc:de,dataUrl:cur_img,place:0,ts:new Date().toISOString()});
+  save(arts);renderG();
+  cur_img=null;pw.style.display='none';pi.src='';
+  ['f-author','f-contact','f-chars','f-desc'].forEach(id=>document.getElementById(id).value='');
   fi.value='';
-  notif('Арт добавлен в галерею');
-  document.getElementById('gallery-section').scrollIntoView({behavior:'smooth'});
+  notif('// арт добавлен в галерею!');
+  document.getElementById('gallery-s').scrollIntoView({behavior:'smooth'});
 });
 
-// ── LIGHTBOX ──
-const lbox=document.getElementById('lightbox'),lbi=document.getElementById('lb-img');
-function lb(src){lbi.src=src;lbox.classList.add('open');}
-document.getElementById('lb-close').addEventListener('click',()=>lbox.classList.remove('open'));
-lbox.addEventListener('click',e=>{if(e.target===lbox)lbox.classList.remove('open');});
+/* ══ LIGHTBOX ══ */
+const lb=document.getElementById('lbox'),lbi=document.getElementById('lbox-img');
+function openLb(src){lbi.src=src;lb.classList.add('on');}
+document.getElementById('lbox-x').addEventListener('click',()=>lb.classList.remove('on'));
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('on');});
 
-// ── ADMIN ──
-const am=document.getElementById('admin-modal');
-document.getElementById('admin-btn').addEventListener('click',()=>am.classList.add('open'));
-document.getElementById('admin-close-btn').addEventListener('click',()=>am.classList.remove('open'));
-am.addEventListener('click',e=>{if(e.target===am)am.classList.remove('open');});
-document.getElementById('admin-pass').addEventListener('keydown',e=>{if(e.key==='Enter')login();});
-document.getElementById('admin-login-btn').addEventListener('click',login);
-function login(){
-  if(document.getElementById('admin-pass').value===PASS){
-    document.getElementById('admin-login').style.display='none';
-    document.getElementById('admin-content').style.display='block';
-    renderAdmin();
-  }else{
-    document.getElementById('admin-err').style.display='block';
-    document.getElementById('admin-pass').value='';
+/* ══ ADMIN ══ */
+const am=document.getElementById('adm-modal');
+document.getElementById('adm-btn').addEventListener('click',()=>am.classList.add('on'));
+document.getElementById('adm-x').addEventListener('click',()=>am.classList.remove('on'));
+am.addEventListener('click',e=>{if(e.target===am)am.classList.remove('on');});
+document.getElementById('adm-pw').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+document.getElementById('adm-go').addEventListener('click',doLogin);
+
+function doLogin(){
+  if(document.getElementById('adm-pw').value===PASS){
+    document.getElementById('adm-login-s').style.display='none';
+    document.getElementById('adm-data').style.display='block';
+    renderA();
+  } else {
+    document.getElementById('adm-err').style.display='block';
+    document.getElementById('adm-pw').value='';
   }
 }
-function renderAdmin(){
-  const arts=load(),list=document.getElementById('admin-list');
-  if(!arts.length){list.innerHTML='<p style="color:var(--muted);padding:20px;text-align:center">Нет работ.</p>';return;}
+
+function renderA(){
+  const arts=load(),list=document.getElementById('adm-list');
+  if(!arts.length){list.innerHTML='<p style="color:var(--muted);font-family:Space Mono,monospace;font-size:.72rem;padding:20px 0;text-align:center">// нет работ.</p>';return;}
   list.innerHTML='';
   arts.forEach(a=>{
     const el=document.createElement('div');el.className='ae';
-    const dt=new Date(a.ts).toLocaleString('ru-RU');
     el.innerHTML=`<img src="${a.dataUrl}" alt=""><div>
-      <div class="ae-name">${x(a.author)}</div>
-      <div class="ae-contact">${x(a.contact)}</div>
-      ${a.chars?`<div class="ae-chars">${x(a.chars)}</div>`:''}
-      ${a.desc?`<div class="ae-desc">"${x(a.desc)}"</div>`:''}
-      <div class="ae-time">${dt}</div>
-      <div class="ae-actions">
-        <button class="ap ap1" data-id="${a.id}" data-p="1">1 место</button>
-        <button class="ap ap2" data-id="${a.id}" data-p="2">2 место</button>
-        <button class="ap ap3" data-id="${a.id}" data-p="3">3 место</button>
-        <button class="ap ap0" data-id="${a.id}" data-p="0">Убрать</button>
-        <button class="ap-del" data-id="${a.id}">Удалить</button>
+      <div class="ae-nm">${xe(a.author)}</div>
+      <div class="ae-ct">${xe(a.contact)}</div>
+      ${a.chars?`<div class="ae-ch">Персонажи: ${xe(a.chars)}</div>`:''}
+      ${a.desc?`<div class="ae-ds">"${xe(a.desc)}"</div>`:''}
+      <div class="ae-tm">${new Date(a.ts).toLocaleString('ru-RU')}</div>
+      <div class="ae-acts">
+        <button class="ap a1" data-id="${a.id}" data-p="1">1 место</button>
+        <button class="ap a2" data-id="${a.id}" data-p="2">2 место</button>
+        <button class="ap a3" data-id="${a.id}" data-p="3">3 место</button>
+        <button class="ap a0" data-id="${a.id}" data-p="0">Убрать</button>
+        <button class="a-del" data-id="${a.id}">Удалить</button>
       </div>
-      ${a.place>0?`<div class="ae-place">Текущее место: ${a.place}</div>`:''}
+      ${a.place>0?`<div class="ae-pl">// место: ${a.place}</div>`:''}
     </div>`;
     list.appendChild(el);
   });
@@ -828,24 +1161,25 @@ function renderAdmin(){
     const id=Number(b.dataset.id),p=Number(b.dataset.p),arts2=load();
     if(p>0)arts2.forEach(a=>{if(a.place===p)a.place=0;});
     const t=arts2.find(a=>a.id===id);if(t)t.place=p;
-    save(arts2);renderGallery();renderAdmin();
-    notif(p>0?`Место ${p} присвоено`:'Место убрано');
+    save(arts2);renderG();renderA();
+    notif(p>0?`// место ${p} присвоено`:'// место убрано');
   }));
-  list.querySelectorAll('.ap-del').forEach(b=>b.addEventListener('click',()=>{
+  list.querySelectorAll('.a-del').forEach(b=>b.addEventListener('click',()=>{
     if(!confirm('Удалить работу?'))return;
-    const id=Number(b.dataset.id);
-    save(load().filter(a=>a.id!==id));renderGallery();renderAdmin();notif('Работа удалена');
+    save(load().filter(a=>a.id!==Number(b.dataset.id)));
+    renderG();renderA();notif('// работа удалена');
   }));
 }
 
-// ── NOTIF ──
-const nf=document.getElementById('notif');let nt;
-function notif(msg){nf.textContent=msg;nf.classList.add('show');clearTimeout(nt);nt=setTimeout(()=>nf.classList.remove('show'),3200);}
+/* ══ NOTIF ══ */
+const nfEl=document.getElementById('notif');let nft;
+function notif(m){nfEl.textContent=m;nfEl.classList.add('on');clearTimeout(nft);nft=setTimeout(()=>nfEl.classList.remove('on'),3400);}
 
-// ── ESC ──
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){lbox.classList.remove('open');am.classList.remove('open');}});
+/* ══ ESC ══ */
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('on');am.classList.remove('on');}});
 
-renderGallery();
+/* ══ INIT ══ */
+renderG();
 </script>
 </body>
 </html>

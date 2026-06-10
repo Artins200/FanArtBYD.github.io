@@ -710,6 +710,71 @@ textarea.fi { resize: vertical; min-height: 80px; }
 .ae-pl { font-family: 'Space Mono', monospace; font-size: .68rem; color: var(--gd); margin-top: 7px; }
 
 /* ════════════════════════════════════════════
+   DOWNLOAD SECTION
+════════════════════════════════════════════ */
+.dl-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.dl-card {
+  display: inline-block;
+  background: var(--ink3);
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  padding: 32px 40px;
+  margin-top: 24px;
+  transition: border-color .3s, box-shadow .3s;
+}
+.dl-card:hover {
+  border-color: rgba(76,201,240,.4);
+  box-shadow: 0 0 40px rgba(76,201,240,.1);
+}
+.dl-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+.dl-name {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1.1rem;
+  color: var(--paper);
+  margin-bottom: 6px;
+}
+.dl-ver {
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  color: var(--cy);
+  margin-bottom: 20px;
+}
+.dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #4cc9f0, #4361ee);
+  color: #fff;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: .85rem;
+  letter-spacing: .04em;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+  box-shadow: 0 6px 30px rgba(76,201,240,.3);
+}
+.dl-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 50px rgba(76,201,240,.45), 0 0 30px rgba(67,97,238,.25);
+}
+.dl-note {
+  font-family: 'Space Mono', monospace;
+  font-size: .6rem;
+  color: var(--dim);
+  margin-top: 14px;
+  letter-spacing: .04em;
+}
+
+/* ════════════════════════════════════════════
    FOOTER
 ════════════════════════════════════════════ */
 footer {
@@ -762,6 +827,7 @@ footer p {
   nav a { font-size: .62rem; padding: 9px 13px; }
   .ae { grid-template-columns: 60px 1fr; }
   .ae img { width: 60px; height: 60px; }
+  .dl-card { padding: 24px 20px; }
 }
 </style>
 </head>
@@ -803,6 +869,7 @@ footer p {
     <a href="#contest">Конкурс</a>
     <a href="#rules">Правила</a>
     <a href="#gallery-s">Галерея</a>
+    <a href="#download">Скачать</a>
   </nav>
 </div>
 
@@ -990,6 +1057,22 @@ footer p {
         <div class="eg-txt">пока нет работ — стань первым</div>
         <div class="eg-line"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- СКАЧАТЬ -->
+  <section id="download" class="rv dl-section">
+    <div class="sh"><div class="sh-tag">Утилиты</div><div class="sh-line"></div></div>
+    <h2>Steam <span class="c">Tools</span> 🛠️</h2>
+    <p class="body-text">Установщик Steam Tools. Файл размещён на GitHub.</p>
+    <div class="dl-card">
+      <div class="dl-icon">📦</div>
+      <div class="dl-name">Steam Tools Setup</div>
+      <div class="dl-ver">// версия 1.8.30</div>
+      <a href="https://raw.githubusercontent.com/Artins200/FanArtBYD.github.io/main/st-setup-1.8.30.exe" class="dl-btn" download>
+        ⬇️ Скачать st-setup-1.8.30.exe
+      </a>
+      <div class="dl-note">// файл с GitHub · нажми чтобы скачать</div>
     </div>
   </section>
 

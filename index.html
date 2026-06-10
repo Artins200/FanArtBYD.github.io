@@ -121,7 +121,6 @@ body:hover #cur { opacity: 1; }
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(11,9,20,.5) 0%, transparent 50%);
 }
-/* Scanline on banner */
 #banner .scan {
   position: absolute; inset: 0;
   background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,.06) 3px, rgba(0,0,0,.06) 4px);
@@ -716,61 +715,87 @@ textarea.fi { resize: vertical; min-height: 80px; }
   text-align: center;
   margin-bottom: 60px;
 }
+.dl-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 36px;
+}
 .dl-card {
-  display: inline-block;
   background: var(--ink3);
   border: 1px solid var(--line);
   border-radius: var(--r2);
-  padding: 32px 40px;
-  margin-top: 24px;
-  transition: border-color .3s, box-shadow .3s;
+  padding: 32px 36px;
+  min-width: 260px;
+  max-width: 320px;
+  flex: 1 1 260px;
+  transition: border-color .3s, box-shadow .3s, transform .25s;
 }
 .dl-card:hover {
   border-color: rgba(76,201,240,.4);
   box-shadow: 0 0 40px rgba(76,201,240,.1);
+  transform: translateY(-3px);
+}
+.dl-card.lua-card:hover {
+  border-color: rgba(6,214,160,.4);
+  box-shadow: 0 0 40px rgba(6,214,160,.1);
 }
 .dl-icon {
-  font-size: 2.4rem;
-  margin-bottom: 12px;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
 }
 .dl-name {
   font-family: 'Dela Gothic One', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--paper);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .dl-ver {
   font-family: 'Space Mono', monospace;
-  font-size: .7rem;
+  font-size: .68rem;
   color: var(--cy);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+}
+.lua-card .dl-ver {
+  color: var(--gr);
 }
 .dl-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, #4cc9f0, #4361ee);
   color: #fff;
   font-family: 'Dela Gothic One', sans-serif;
-  font-size: .85rem;
+  font-size: .8rem;
   letter-spacing: .04em;
   text-decoration: none;
   border: none;
   border-radius: 12px;
-  padding: 16px 32px;
+  padding: 14px 28px;
   cursor: pointer;
   transition: transform .25s, box-shadow .25s;
+}
+.dl-btn.exe-btn {
+  background: linear-gradient(135deg, #4cc9f0, #4361ee);
   box-shadow: 0 6px 30px rgba(76,201,240,.3);
 }
-.dl-btn:hover {
-  transform: translateY(-3px);
+.dl-btn.exe-btn:hover {
+  transform: translateY(-2px);
   box-shadow: 0 14px 50px rgba(76,201,240,.45), 0 0 30px rgba(67,97,238,.25);
+}
+.dl-btn.lua-btn {
+  background: linear-gradient(135deg, #06d6a0, #118ab2);
+  box-shadow: 0 6px 30px rgba(6,214,160,.3);
+}
+.dl-btn.lua-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 50px rgba(6,214,160,.45), 0 0 30px rgba(17,138,178,.25);
 }
 .dl-note {
   font-family: 'Space Mono', monospace;
   font-size: .6rem;
   color: var(--dim);
-  margin-top: 14px;
+  margin-top: 12px;
   letter-spacing: .04em;
 }
 
@@ -828,6 +853,7 @@ footer p {
   .ae { grid-template-columns: 60px 1fr; }
   .ae img { width: 60px; height: 60px; }
   .dl-card { padding: 24px 20px; }
+  .dl-grid { gap: 14px; }
 }
 </style>
 </head>
@@ -1063,16 +1089,29 @@ footer p {
   <!-- СКАЧАТЬ -->
   <section id="download" class="rv dl-section">
     <div class="sh"><div class="sh-tag">Утилиты</div><div class="sh-line"></div></div>
-    <h2>Steam <span class="c">Tools</span> 🛠️</h2>
-    <p class="body-text">Установщик Steam Tools. Файл размещён на GitHub.</p>
-    <div class="dl-card">
-      <div class="dl-icon">📦</div>
-      <div class="dl-name">Steam Tools Setup</div>
-      <div class="dl-ver">// версия 1.8.30</div>
-      <a href="https://raw.githubusercontent.com/Artins200/FanArtBYD.github.io/main/st-setup-1.8.30.exe" class="dl-btn" download>
-        ⬇️ Скачать st-setup-1.8.30.exe
-      </a>
-      <div class="dl-note">// файл с GitHub · нажми чтобы скачать</div>
+    <h2>Файлы для <span class="c">скачивания</span> 📦</h2>
+    <p class="body-text">Steam Tools и дополнительный Lua-скрипт. Файлы размещены на GitHub.</p>
+    <div class="dl-grid">
+      <!-- Карточка EXE -->
+      <div class="dl-card">
+        <div class="dl-icon">⚙️</div>
+        <div class="dl-name">Steam Tools Setup</div>
+        <div class="dl-ver">// st-setup-1.8.30.exe</div>
+        <a href="https://raw.githubusercontent.com/Artins200/FanArtBYD.github.io/main/st-setup-1.8.30.exe" class="dl-btn exe-btn" download>
+          ⬇️ Скачать .exe
+        </a>
+        <div class="dl-note">// установщик Steam Tools</div>
+      </div>
+      <!-- Карточка LUA -->
+      <div class="dl-card lua-card">
+        <div class="dl-icon">📜</div>
+        <div class="dl-name">Lua Script</div>
+        <div class="dl-ver">// 3241660.lua</div>
+        <a href="https://raw.githubusercontent.com/Artins200/FanArtBYD.github.io/main/3241660.lua" class="dl-btn lua-btn" download>
+          ⬇️ Скачать .lua
+        </a>
+        <div class="dl-note">// скрипт 3241660.lua</div>
+      </div>
     </div>
   </section>
 
